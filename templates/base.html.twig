@@ -15,7 +15,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="btn btn-outline-light" href="{{ path('mygroups.index') }}"> Mes Groupes  <span class="badge badge-light">9</span> </a>
+                <a class="btn btn-outline-light" href="{{ path('mygroups') }}"> Mes Groupes  <span class="badge badge-light">9</span> </a>
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -47,7 +47,7 @@
                 <button type="button" class="btn btn-outline-light my-2 my-sm-0">
                     Messagerie <span class="badge badge-light">4</span>
                 </button>
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Connexion</button>
+                <a class="btn btn-outline-light" href="{{ path('creataccount') }}"> Crée Un Compt  </a>
             </nav>
 
         {% block body %}{% endblock %}

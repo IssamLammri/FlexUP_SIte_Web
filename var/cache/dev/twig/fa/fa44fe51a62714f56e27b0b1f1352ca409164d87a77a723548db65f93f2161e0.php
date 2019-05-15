@@ -70,7 +70,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
                 </button>
                 <a class=\"btn btn-outline-light\" href=\"";
         // line 18
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mygroups.index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mygroups");
         echo "\"> Mes Groupes  <span class=\"badge badge-light\">9</span> </a>
 
 
@@ -103,7 +103,10 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
                 <button type=\"button\" class=\"btn btn-outline-light my-2 my-sm-0\">
                     Messagerie <span class=\"badge badge-light\">4</span>
                 </button>
-                <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Connexion</button>
+                <a class=\"btn btn-outline-light\" href=\"";
+        // line 50
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("creataccount");
+        echo "\"> Crée Un Compt  </a>
             </nav>
 
         ";
@@ -210,7 +213,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     public function getDebugInfo()
     {
-        return array (  185 => 54,  168 => 53,  151 => 10,  133 => 5,  116 => 55,  113 => 54,  111 => 53,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
+        return array (  188 => 54,  171 => 53,  154 => 10,  136 => 5,  119 => 55,  116 => 54,  114 => 53,  108 => 50,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -232,7 +235,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
                 <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
                     <span class=\"navbar-toggler-icon\"></span>
                 </button>
-                <a class=\"btn btn-outline-light\" href=\"{{ path('mygroups.index') }}\"> Mes Groupes  <span class=\"badge badge-light\">9</span> </a>
+                <a class=\"btn btn-outline-light\" href=\"{{ path('mygroups') }}\"> Mes Groupes  <span class=\"badge badge-light\">9</span> </a>
 
 
                 <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
@@ -264,7 +267,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
                 <button type=\"button\" class=\"btn btn-outline-light my-2 my-sm-0\">
                     Messagerie <span class=\"badge badge-light\">4</span>
                 </button>
-                <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Connexion</button>
+                <a class=\"btn btn-outline-light\" href=\"{{ path('creataccount') }}\"> Crée Un Compt  </a>
             </nav>
 
         {% block body %}{% endblock %}
@@ -276,6 +279,6 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     </body>
 </html>
-", "base.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\FlexUP\\templates\\base.html.twig");
+", "base.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP\\templates\\base.html.twig");
     }
 }
