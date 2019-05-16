@@ -26,6 +26,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/groupes' => [[['_route' => 'Groupes', '_controller' => 'App\\Controller\\Groupes::index'], null, null, null, false, false, null]],
             '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
             '/inscription' => [[['_route' => 'Inscription', '_controller' => 'App\\Controller\\Inscription::index'], null, null, null, false, false, null]],
+            '/Issam' => [[['_route' => 'issam', '_controller' => 'App\\Controller\\IssamController\\IssamController::index'], null, null, null, false, false, null]],
             '/mygroups' => [[['_route' => 'mygroups', '_controller' => 'App\\Controller\\MyGroups::index'], null, null, null, false, false, null]],
             '/panier' => [[['_route' => 'Panier', '_controller' => 'App\\Controller\\Panier::index'], null, null, null, false, false, null]],
         ];

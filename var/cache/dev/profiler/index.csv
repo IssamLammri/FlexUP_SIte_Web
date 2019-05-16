@@ -218,3 +218,5 @@ d52886,::1,GET,http://localhost:8000/favicon.ico,1557999706,,404
 891284,::1,GET,http://localhost:8000/connexion,1557999764,,200
 317b58,::1,GET,http://localhost:8000/groupes,1557999766,,200
 4c892e,::1,GET,http://localhost:8000/,1557999767,,200
+976670,::1,GET,http://localhost:8000/,1558001094,,200
+81d0c2,::1,GET,http://localhost:8000/Issam,1558001097,,200

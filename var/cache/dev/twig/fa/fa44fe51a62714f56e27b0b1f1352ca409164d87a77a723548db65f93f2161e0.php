@@ -120,15 +120,19 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
         // line 54
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Connexion");
         echo "\"> Connexion </a>
+        <a class=\"btn btn-outline-light\" href=\"";
+        // line 55
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("issam");
+        echo "\"> Issam </a>
     </li>
 </nav>
 
 ";
-        // line 58
-        $this->displayBlock('body', $context, $blocks);
         // line 59
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('body', $context, $blocks);
         // line 60
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 61
         echo "<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
@@ -180,7 +184,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     }
 
-    // line 58
+    // line 59
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -197,7 +201,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     }
 
-    // line 59
+    // line 60
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -226,7 +230,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     public function getDebugInfo()
     {
-        return array (  201 => 59,  184 => 58,  167 => 10,  149 => 5,  132 => 60,  130 => 59,  128 => 58,  121 => 54,  116 => 52,  112 => 51,  82 => 24,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
+        return array (  205 => 60,  188 => 59,  171 => 10,  153 => 5,  136 => 61,  134 => 60,  132 => 59,  125 => 55,  121 => 54,  116 => 52,  112 => 51,  82 => 24,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -285,6 +289,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
         <a class=\"btn btn-outline-light\" href=\"{{ path('Inscription') }}\"> Inscription
         </a>
         <a class=\"btn btn-outline-light\" href=\"{{ path('Connexion') }}\"> Connexion </a>
+        <a class=\"btn btn-outline-light\" href=\"{{ path('issam') }}\"> Issam </a>
     </li>
 </nav>
 
