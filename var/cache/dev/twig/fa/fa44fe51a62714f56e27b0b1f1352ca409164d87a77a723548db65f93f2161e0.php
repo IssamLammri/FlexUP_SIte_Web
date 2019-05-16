@@ -44,84 +44,97 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
         // line 1
         echo "<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>";
+<head>
+    <meta charset=\"UTF-8\">
+    <title>";
         // line 5
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
 
 
-        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+    <link rel=\"stylesheet\"   href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
 
-        ";
+    ";
         // line 10
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 11
-        echo "    </head>
-    <body>
-            <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-                <a class=\"navbar-brand\" href=\"";
+        echo "</head>
+<body>
+<nav class=\"navbar navbar-expand-lg navbar-dark color: bg-primary\">
+    <a class=\"navbar-brand\" href=\"";
         // line 14
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">FlexUP</a>
-                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                    <span class=\"navbar-toggler-icon\"></span>
-                </button>
-                <a class=\"btn btn-outline-light\" href=\"";
+    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+    </button>
+    <a class=\"btn btn-outline-light\" href=\"";
         // line 18
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mygroups");
-        echo "\"> Mes Groupes  <span class=\"badge badge-light\">9</span> </a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Groupes");
+        echo "\"> Mes Groupes   </a>
 
 
-                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                    <ul class=\"navbar-nav mr-auto\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#\">Panier</a>
-                        </li>
-                        <li class=\"nav-item dropdown\">
-                            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                Services
-                            </a>
-                            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                                <a class=\"dropdown-item\" href=\"#\">Travaux Batiment </a>
-                                <a class=\"dropdown-item\" href=\"#\">Another Services</a>
-                                <div class=\"dropdown-divider\"></div>
-                                <a class=\"dropdown-item\" href=\"#\">Something else here</a>
-                            </div>
-                        </li>
-
-
-                    </ul>
-                    <form class=\"form-inline my-2 my-lg-0\">
-                        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-                        <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Search</button>
-                    </form>
-
-
-                </div>
-                <button type=\"button\" class=\"btn btn-outline-light my-2 my-sm-0\">
-                    Messagerie <span class=\"badge badge-light\">4</span>
-                </button>
+    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+        <ul class=\"navbar-nav mr-auto\">
+            <li class=\"nav-item\">
                 <a class=\"btn btn-outline-light\" href=\"";
-        // line 50
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("creataccount");
-        echo "\"> Crée Un Compt  </a>
-            </nav>
+        // line 24
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Commande");
+        echo "\"> Commande </a>
+            </li>
+            <li class=\"nav-item dropdown\">
+                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                    Services
+                </a>
+                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                    <a class=\"dropdown-item\" href=\"#\">Travaux batiment </a>
+                    <a class=\"dropdown-item\" href=\"#\">Services domestique</a>
+                    <a class=\"dropdown-item\" href=\"#\">Services aux handicapés</a>
+                    <a class=\"dropdown-item\" href=\"#\">Services aux personnes à mobilité réduite</a>
+                    <a class=\"dropdown-item\" href=\"#\">Autres services</a>
+                    <div class=\"dropdown-divider\"></div>
+                    <a class=\"dropdown-item\" href=\"#\">Ajouter un service</a>
+                </div>
+            </li>
 
-        ";
-        // line 53
-        $this->displayBlock('body', $context, $blocks);
+
+        </ul>
+        <form class=\"form-inline my-2 my-lg-0\">
+            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Entrez votre recherche\" aria-label=\"Search\">
+            <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Rechercher</button>
+        </form>
+
+
+    </div>
+    <li class=\"nav-item\">
+        <a class=\"btn btn-outline-light\" href=\"";
+        // line 51
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Panier");
+        echo "\"> Panier </a>
+        <a class=\"btn btn-outline-light\" href=\"";
+        // line 52
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Inscription");
+        echo "\"> Inscription
+        </a>
+        <a class=\"btn btn-outline-light\" href=\"";
         // line 54
-        echo "        ";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Connexion");
+        echo "\"> Connexion </a>
+    </li>
+</nav>
+
+";
+        // line 58
+        $this->displayBlock('body', $context, $blocks);
+        // line 59
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 55
-        echo "        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
-        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
-        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+        // line 60
+        echo "<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
 
 
-    </body>
+</body>
 </html>
 ";
         
@@ -141,7 +154,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Bienvenue!!";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -167,7 +180,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     }
 
-    // line 53
+    // line 58
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -184,7 +197,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     }
 
-    // line 54
+    // line 59
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -213,71 +226,76 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     public function getDebugInfo()
     {
-        return array (  188 => 54,  171 => 53,  154 => 10,  136 => 5,  119 => 55,  116 => 54,  114 => 53,  108 => 50,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
+        return array (  201 => 59,  184 => 58,  167 => 10,  149 => 5,  132 => 60,  130 => 59,  128 => 58,  121 => 54,  116 => 52,  112 => 51,  82 => 24,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+<head>
+    <meta charset=\"UTF-8\">
+    <title>{% block title %}Bienvenue!!{% endblock %}</title>
 
 
-        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+    <link rel=\"stylesheet\"   href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
 
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-            <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">
-                <a class=\"navbar-brand\" href=\"{{ path('home') }}\">FlexUP</a>
-                <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                    <span class=\"navbar-toggler-icon\"></span>
-                </button>
-                <a class=\"btn btn-outline-light\" href=\"{{ path('mygroups') }}\"> Mes Groupes  <span class=\"badge badge-light\">9</span> </a>
-
-
-                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                    <ul class=\"navbar-nav mr-auto\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"#\">Panier</a>
-                        </li>
-                        <li class=\"nav-item dropdown\">
-                            <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                Services
-                            </a>
-                            <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                                <a class=\"dropdown-item\" href=\"#\">Travaux Batiment </a>
-                                <a class=\"dropdown-item\" href=\"#\">Another Services</a>
-                                <div class=\"dropdown-divider\"></div>
-                                <a class=\"dropdown-item\" href=\"#\">Something else here</a>
-                            </div>
-                        </li>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<nav class=\"navbar navbar-expand-lg navbar-dark color: bg-primary\">
+    <a class=\"navbar-brand\" href=\"{{ path('home') }}\">FlexUP</a>
+    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+        <span class=\"navbar-toggler-icon\"></span>
+    </button>
+    <a class=\"btn btn-outline-light\" href=\"{{ path('Groupes') }}\"> Mes Groupes   </a>
 
 
-                    </ul>
-                    <form class=\"form-inline my-2 my-lg-0\">
-                        <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-                        <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Search</button>
-                    </form>
-
-
+    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
+        <ul class=\"navbar-nav mr-auto\">
+            <li class=\"nav-item\">
+                <a class=\"btn btn-outline-light\" href=\"{{ path('Commande') }}\"> Commande </a>
+            </li>
+            <li class=\"nav-item dropdown\">
+                <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
+                    Services
+                </a>
+                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                    <a class=\"dropdown-item\" href=\"#\">Travaux batiment </a>
+                    <a class=\"dropdown-item\" href=\"#\">Services domestique</a>
+                    <a class=\"dropdown-item\" href=\"#\">Services aux handicapés</a>
+                    <a class=\"dropdown-item\" href=\"#\">Services aux personnes à mobilité réduite</a>
+                    <a class=\"dropdown-item\" href=\"#\">Autres services</a>
+                    <div class=\"dropdown-divider\"></div>
+                    <a class=\"dropdown-item\" href=\"#\">Ajouter un service</a>
                 </div>
-                <button type=\"button\" class=\"btn btn-outline-light my-2 my-sm-0\">
-                    Messagerie <span class=\"badge badge-light\">4</span>
-                </button>
-                <a class=\"btn btn-outline-light\" href=\"{{ path('creataccount') }}\"> Crée Un Compt  </a>
-            </nav>
-
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
-        <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
-        <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+            </li>
 
 
-    </body>
+        </ul>
+        <form class=\"form-inline my-2 my-lg-0\">
+            <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Entrez votre recherche\" aria-label=\"Search\">
+            <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Rechercher</button>
+        </form>
+
+
+    </div>
+    <li class=\"nav-item\">
+        <a class=\"btn btn-outline-light\" href=\"{{ path('Panier') }}\"> Panier </a>
+        <a class=\"btn btn-outline-light\" href=\"{{ path('Inscription') }}\"> Inscription
+        </a>
+        <a class=\"btn btn-outline-light\" href=\"{{ path('Connexion') }}\"> Connexion </a>
+    </li>
+</nav>
+
+{% block body %}{% endblock %}
+{% block javascripts %}{% endblock %}
+<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+
+
+</body>
 </html>
 ", "base.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP\\templates\\base.html.twig");
     }

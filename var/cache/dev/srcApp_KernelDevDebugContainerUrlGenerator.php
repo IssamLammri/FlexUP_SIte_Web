@@ -33,8 +33,13 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         '_profiler_exception' => [['token'], ['_controller' => 'web_profiler.controller.exception::showAction'], [], [['text', '/exception'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
         '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
         'creataccount' => [[], ['_controller' => 'App\\Controller\\Client_Create_Account::index'], [], [['text', '/createaccount']], [], []],
+        'Commande' => [[], ['_controller' => 'App\\Controller\\Commande::index'], [], [['text', '/commande']], [], []],
+        'Connexion' => [[], ['_controller' => 'App\\Controller\\Connexion::index'], [], [['text', '/connexion']], [], []],
+        'Groupes' => [[], ['_controller' => 'App\\Controller\\Groupes::index'], [], [['text', '/groupes']], [], []],
         'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
+        'Inscription' => [[], ['_controller' => 'App\\Controller\\Inscription::index'], [], [['text', '/inscription']], [], []],
         'mygroups' => [[], ['_controller' => 'App\\Controller\\MyGroups::index'], [], [['text', '/mygroups']], [], []],
+        'Panier' => [[], ['_controller' => 'App\\Controller\\Panier::index'], [], [['text', '/panier']], [], []],
     ];
         }
     }

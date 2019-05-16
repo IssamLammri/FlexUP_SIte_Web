@@ -21,8 +21,13 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
             '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
             '/createaccount' => [[['_route' => 'creataccount', '_controller' => 'App\\Controller\\Client_Create_Account::index'], null, null, null, false, false, null]],
+            '/commande' => [[['_route' => 'Commande', '_controller' => 'App\\Controller\\Commande::index'], null, null, null, false, false, null]],
+            '/connexion' => [[['_route' => 'Connexion', '_controller' => 'App\\Controller\\Connexion::index'], null, null, null, false, false, null]],
+            '/groupes' => [[['_route' => 'Groupes', '_controller' => 'App\\Controller\\Groupes::index'], null, null, null, false, false, null]],
             '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\HomeController::index'], null, null, null, false, false, null]],
+            '/inscription' => [[['_route' => 'Inscription', '_controller' => 'App\\Controller\\Inscription::index'], null, null, null, false, false, null]],
             '/mygroups' => [[['_route' => 'mygroups', '_controller' => 'App\\Controller\\MyGroups::index'], null, null, null, false, false, null]],
+            '/panier' => [[['_route' => 'Panier', '_controller' => 'App\\Controller\\Panier::index'], null, null, null, false, false, null]],
         ];
         $this->regexpList = [
             0 => '{^(?'

@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerZ0IRCAH;
+namespace ContainerMtSRE4G;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -58,8 +58,13 @@ class srcApp_KernelDevDebugContainer extends Container
         ];
         $this->fileMap = [
             'App\\Controller\\Client_Create_Account' => 'getClientCreateAccountService.php',
+            'App\\Controller\\Commande' => 'getCommandeService.php',
+            'App\\Controller\\Connexion' => 'getConnexionService.php',
+            'App\\Controller\\Groupes' => 'getGroupesService.php',
             'App\\Controller\\HomeController' => 'getHomeControllerService.php',
+            'App\\Controller\\Inscription' => 'getInscriptionService.php',
             'App\\Controller\\MyGroups' => 'getMyGroupsService.php',
+            'App\\Controller\\Panier' => 'getPanierService.php',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController' => 'getRedirectControllerService.php',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController' => 'getTemplateControllerService.php',
             'cache.app_clearer' => 'getCache_AppClearerService.php',

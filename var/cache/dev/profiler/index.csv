@@ -205,3 +205,16 @@ dab357,::1,GET,http://localhost:8000/mygroups,1557915148,,200
 c69817,::1,GET,http://localhost:8000/createaccount,1557916919,,200
 ddb061,::1,GET,http://localhost:8000/createaccount,1557924995,,200
 0eb6c1,::1,GET,http://localhost:8000/createaccount,1557926886,,200
+b29b3d,::1,GET,http://localhost:8000/createaccount,1557930113,,200
+6e3444,::1,GET,http://localhost:8000/,1557999704,,200
+c954ea,::1,GET,http://localhost:8000/,1557999704,,200
+a44b12,::1,GET,http://localhost:8000/favicon.ico,1557999706,d52886,200
+d52886,::1,GET,http://localhost:8000/favicon.ico,1557999706,,404
+6103db,::1,GET,http://localhost:8000/groupes,1557999751,,200
+8f2026,::1,GET,http://localhost:8000/commande,1557999756,,200
+1aa6bb,::1,GET,http://localhost:8000/commande,1557999760,,200
+5f2a29,::1,GET,http://localhost:8000/panier,1557999761,,200
+0d37b4,::1,GET,http://localhost:8000/inscription,1557999762,,200
+891284,::1,GET,http://localhost:8000/connexion,1557999764,,200
+317b58,::1,GET,http://localhost:8000/groupes,1557999766,,200
+4c892e,::1,GET,http://localhost:8000/,1557999767,,200
