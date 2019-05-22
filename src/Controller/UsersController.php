@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Users;
-use App\Form\Users1Type;
+use App\Form\UsersType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -34,7 +34,7 @@ class UsersController extends AbstractController
     public function new(Request $request): Response
     {
         $user = new Users();
-        $form = $this->createForm(Users1Type::class, $user);
+        $form = $this->createForm(UsersType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -66,7 +66,7 @@ class UsersController extends AbstractController
      */
     public function edit(Request $request, Users $user): Response
     {
-        $form = $this->createForm(Users1Type::class, $user);
+        $form = $this->createForm(UsersType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {

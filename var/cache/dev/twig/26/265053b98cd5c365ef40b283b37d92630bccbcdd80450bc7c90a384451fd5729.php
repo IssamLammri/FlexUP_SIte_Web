@@ -25,6 +25,7 @@ class __TwigTemplate_f9198a567049b9d61e793468ed6399e7e6161163863f25d348389ef9dcf
 
         $this->blocks = [
             'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
             'body' => [$this, 'block_body'],
         ];
     }
@@ -72,6 +73,27 @@ class __TwigTemplate_f9198a567049b9d61e793468ed6399e7e6161163863f25d348389ef9dcf
     }
 
     // line 5
+    public function block_stylesheets($context, array $blocks = [])
+    {
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 6
+        echo "    <link rel=\"stylesheet\"  href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 10
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -80,16 +102,16 @@ class __TwigTemplate_f9198a567049b9d61e793468ed6399e7e6161163863f25d348389ef9dcf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 11
         echo "    <h1>Create new Users</h1>
 
     ";
-        // line 8
+        // line 13
         echo twig_include($this->env, $context, "users/_form.html.twig");
         echo "
 
     <a href=\"";
-        // line 10
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_index");
         echo "\">back to list</a>
 ";
@@ -113,7 +135,7 @@ class __TwigTemplate_f9198a567049b9d61e793468ed6399e7e6161163863f25d348389ef9dcf
 
     public function getDebugInfo()
     {
-        return array (  93 => 10,  88 => 8,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  115 => 15,  110 => 13,  106 => 11,  97 => 10,  85 => 6,  76 => 5,  58 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -121,6 +143,11 @@ class __TwigTemplate_f9198a567049b9d61e793468ed6399e7e6161163863f25d348389ef9dcf
         return new Source("{% extends 'base.html.twig' %}
 
 {% block title %}New Users{% endblock %}
+
+{% block stylesheets %}
+    <link rel=\"stylesheet\"  href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+
+{% endblock %}
 
 {% block body %}
     <h1>Create new Users</h1>

@@ -507,9 +507,6 @@
     <service id="App\Form\ServiceType" class="App\Form\ServiceType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
-    <service id="App\Form\Users1Type" class="App\Form\Users1Type" autowire="true" autoconfigure="true">
-      <tag name="form.type"/>
-    </service>
     <service id="App\Form\UsersType" class="App\Form\UsersType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -779,7 +776,6 @@
         <argument>App\Form\CategoryType</argument>
         <argument>App\Form\GroupsType</argument>
         <argument>App\Form\ServiceType</argument>
-        <argument>App\Form\Users1Type</argument>
         <argument>App\Form\UsersType</argument>
         <argument>App\Form\ZoneType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -1027,7 +1023,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.qFx2uzd"/>
+      <argument type="service" id=".service_locator.rMR2N_9"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4502,8 +4498,6 @@
     <service id=".abstract.instanceof.App\Form\GroupsType" class="App\Form\GroupsType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ServiceType" class="App\Form\ServiceType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\ServiceType" class="App\Form\ServiceType" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\Users1Type" class="App\Form\Users1Type" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Form\Users1Type" class="App\Form\Users1Type" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UsersType" class="App\Form\UsersType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UsersType" class="App\Form\UsersType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ZoneType" class="App\Form\ZoneType" autowire="true" abstract="true"/>
@@ -4816,14 +4810,13 @@
       <argument type="service" id="debug.argument_resolver.variadic.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.qFx2uzd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.rMR2N_9" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AddressesType" type="service" id="App\Form\AddressesType"/>
         <argument key="App\Form\CategoryType" type="service" id="App\Form\CategoryType"/>
         <argument key="App\Form\GroupsType" type="service" id="App\Form\GroupsType"/>
         <argument key="App\Form\ServiceType" type="service" id="App\Form\ServiceType"/>
-        <argument key="App\Form\Users1Type" type="service" id="App\Form\Users1Type"/>
         <argument key="App\Form\UsersType" type="service" id="App\Form\UsersType"/>
         <argument key="App\Form\ZoneType" type="service" id="App\Form\ZoneType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>

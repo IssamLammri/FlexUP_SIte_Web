@@ -64,10 +64,10 @@ class Users extends \App\Entity\Users implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idUser', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'emailConfirmed', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'mobile', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'firstName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'lastName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'userName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'isPro', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidNumber', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidExpirationDate', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidEmissionEntity', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'sSN', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idMainAddress', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidType'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idUser', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'emailConfirmed', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'mobile', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'firstName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'lastName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'userName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'isPro', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idMainAddress', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidType'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idUser', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'emailConfirmed', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'mobile', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'firstName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'lastName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'userName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'isPro', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidNumber', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidExpirationDate', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidEmissionEntity', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'sSN', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idMainAddress', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidType'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idUser', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'email', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'emailConfirmed', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'mobile', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'firstName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'lastName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'userName', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'password', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'isPro', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'idMainAddress', '' . "\0" . 'App\\Entity\\Users' . "\0" . 'pidType'];
     }
 
     /**
@@ -362,94 +362,6 @@ class Users extends \App\Entity\Users implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsPro', [$isPro]);
 
         return parent::setIsPro($isPro);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPidNumber(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPidNumber', []);
-
-        return parent::getPidNumber();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPidNumber(?string $pidNumber): \App\Entity\Users
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPidNumber', [$pidNumber]);
-
-        return parent::setPidNumber($pidNumber);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPidExpirationDate(): ?\DateTimeInterface
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPidExpirationDate', []);
-
-        return parent::getPidExpirationDate();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPidExpirationDate(?\DateTimeInterface $pidExpirationDate): \App\Entity\Users
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPidExpirationDate', [$pidExpirationDate]);
-
-        return parent::setPidExpirationDate($pidExpirationDate);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getPidEmissionEntity(): ?string
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getPidEmissionEntity', []);
-
-        return parent::getPidEmissionEntity();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPidEmissionEntity(?string $pidEmissionEntity): \App\Entity\Users
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPidEmissionEntity', [$pidEmissionEntity]);
-
-        return parent::setPidEmissionEntity($pidEmissionEntity);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getSSN(): ?int
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSSN', []);
-
-        return parent::getSSN();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setSSN(?int $sSN): \App\Entity\Users
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setSSN', [$sSN]);
-
-        return parent::setSSN($sSN);
     }
 
     /**

@@ -20,10 +20,6 @@ class UsersType extends AbstractType
             ->add('userName')
             ->add('password')
             ->add('isPro')
-            ->add('pidNumber')
-            ->add('pidExpirationDate')
-            ->add('pidEmissionEntity')
-            ->add('sSN')
             ->add('idMainAddress')
             ->add('pidType')
         ;
