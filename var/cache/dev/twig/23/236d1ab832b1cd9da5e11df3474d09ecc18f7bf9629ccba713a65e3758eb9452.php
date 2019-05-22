@@ -84,30 +84,12 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         echo "
     <div class=\"container\">
         <h1> Issam </h1>
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 9
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_index");
-        echo "\"> Users </a>
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 10
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("groups_index");
-        echo "\"> Groups </a>
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 11
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addresses_index");
-        echo "\"> Address </a>
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_index");
-        echo "\"> Service </a>
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 13
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_index");
-        echo "\"> Category </a>
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 14
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_index");
-        echo "\"> Zone de travaille </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Users </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Groups </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Address </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Service </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Category </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Zone de travaille </a>
 
 
 
@@ -135,7 +117,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
     public function getDebugInfo()
     {
-        return array (  109 => 14,  105 => 13,  101 => 12,  97 => 11,  93 => 10,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -148,12 +130,12 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
     <div class=\"container\">
         <h1> Issam </h1>
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('users_index') }}\"> Users </a>
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('groups_index') }}\"> Groups </a>
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('addresses_index') }}\"> Address </a>
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('service_index') }}\"> Service </a>
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('service_index') }}\"> Category </a>
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('service_index') }}\"> Zone de travaille </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Users </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Groups </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Address </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Service </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Category </a>
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Zone de travaille </a>
 
 
 

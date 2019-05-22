@@ -301,3 +301,14 @@ c96f61,::1,GET,http://localhost:8000/service/,1558439601,,200
 451bd6,::1,GET,http://localhost:8000/,1558527868,,200
 b40136,::1,GET,http://localhost:8000/favicon.ico,1558527870,383ba7,200
 383ba7,::1,GET,http://localhost:8000/favicon.ico,1558527870,,404
+894c0b,::1,GET,http://localhost:8000/Issam,1558528143,,200
+6212e4,::1,GET,http://localhost:8000/groups/,1558528146,,200
+a1e7d9,::1,GET,http://localhost:8000/users/,1558528150,,200
+43f4a1,::1,GET,http://localhost:8000/Issam,1558528605,,200
+3c3106,::1,GET,http://localhost:8000/Issam,1558528664,,200
+b871e1,::1,GET,http://localhost:8000/Issam,1558528727,,200
+06194a,::1,GET,http://localhost:8000/groupes,1558528732,,200
+e73fae,::1,GET,http://localhost:8000/,1558528733,,200
+abcfc5,::1,GET,http://localhost:8000/...,1558528734,a4c161,200
+a4c161,::1,GET,http://localhost:8000/...,1558528734,,404
+2ca25d,::1,GET,http://localhost:8000/,1558528853,,200
