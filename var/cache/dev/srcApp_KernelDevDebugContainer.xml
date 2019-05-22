@@ -397,6 +397,13 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\AddressesController"/>
       </call>
     </service>
+    <service id="App\Controller\CategoryController" class="App\Controller\CategoryController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\CategoryController"/>
+      </call>
+    </service>
     <service id="App\Controller\Client_Create_Account" class="App\Controller\Client_Create_Account" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -489,6 +496,9 @@
       </call>
     </service>
     <service id="App\Form\AddressesType" class="App\Form\AddressesType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\GroupsType" class="App\Form\GroupsType" autowire="true" autoconfigure="true">
@@ -766,6 +776,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\AddressesType</argument>
+        <argument>App\Form\CategoryType</argument>
         <argument>App\Form\GroupsType</argument>
         <argument>App\Form\ServiceType</argument>
         <argument>App\Form\Users1Type</argument>
@@ -1016,7 +1027,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.oa6V3VP"/>
+      <argument type="service" id=".service_locator.qFx2uzd"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -2071,14 +2082,6 @@
       </call>
       <call method="addListener">
         <argument>kernel.request</argument>
-        <argument type="collection">
-          <argument type="service" id="debug.debug_handlers_listener"/>
-          <argument>configure</argument>
-        </argument>
-        <argument>2048</argument>
-      </call>
-      <call method="addListener">
-        <argument>console.command</argument>
         <argument type="collection">
           <argument type="service" id="debug.debug_handlers_listener"/>
           <argument>configure</argument>
@@ -4449,6 +4452,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AddressesController" class="App\Controller\AddressesController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AddressesController" class="App\Controller\AddressesController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AddressesController" class="App\Controller\AddressesController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CategoryController" class="App\Controller\CategoryController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Client_Create_Account" class="App\Controller\Client_Create_Account" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Client_Create_Account" class="App\Controller\Client_Create_Account" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Client_Create_Account" class="App\Controller\Client_Create_Account" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4490,6 +4496,8 @@
     <service id=".abstract.instanceof.App\Controller\ZoneController" class="App\Controller\ZoneController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AddressesType" class="App\Form\AddressesType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AddressesType" class="App\Form\AddressesType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\CategoryType" class="App\Form\CategoryType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\GroupsType" class="App\Form\GroupsType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\GroupsType" class="App\Form\GroupsType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ServiceType" class="App\Form\ServiceType" autowire="true" abstract="true"/>
@@ -4668,6 +4676,12 @@
         <argument key="address" type="service" id=".errored..service_locator.alodU2Q.App\Entity\Addresses"/>
       </argument>
     </service>
+    <service id=".service_locator..JzDQIR" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="category" type="service" id=".errored..service_locator..JzDQIR.App\Entity\Category"/>
+      </argument>
+    </service>
     <service id=".service_locator.8z1HQm8" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4692,12 +4706,15 @@
         <argument key="zone" type="service" id=".errored..service_locator.dnczLyX.App\Entity\Zone"/>
       </argument>
     </service>
-    <service id=".service_locator.NZcyyGq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.8f40GG5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AddressesController::delete" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\AddressesController::edit" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\AddressesController::show" type="service" id=".service_locator.alodU2Q"/>
+        <argument key="App\Controller\CategoryController::delete" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\CategoryController::edit" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\CategoryController::show" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\GroupsController::delete" type="service" id=".service_locator.8z1HQm8"/>
         <argument key="App\Controller\GroupsController::edit" type="service" id=".service_locator.8z1HQm8"/>
         <argument key="App\Controller\GroupsController::show" type="service" id=".service_locator.8z1HQm8"/>
@@ -4713,6 +4730,9 @@
         <argument key="App\Controller\AddressesController:delete" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\AddressesController:edit" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\AddressesController:show" type="service" id=".service_locator.alodU2Q"/>
+        <argument key="App\Controller\CategoryController:delete" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\CategoryController:edit" type="service" id=".service_locator..JzDQIR"/>
+        <argument key="App\Controller\CategoryController:show" type="service" id=".service_locator..JzDQIR"/>
         <argument key="App\Controller\GroupsController:delete" type="service" id=".service_locator.8z1HQm8"/>
         <argument key="App\Controller\GroupsController:edit" type="service" id=".service_locator.8z1HQm8"/>
         <argument key="App\Controller\GroupsController:show" type="service" id=".service_locator.8z1HQm8"/>
@@ -4796,10 +4816,11 @@
       <argument type="service" id="debug.argument_resolver.variadic.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.oa6V3VP" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.qFx2uzd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AddressesType" type="service" id="App\Form\AddressesType"/>
+        <argument key="App\Form\CategoryType" type="service" id="App\Form\CategoryType"/>
         <argument key="App\Form\GroupsType" type="service" id="App\Form\GroupsType"/>
         <argument key="App\Form\ServiceType" type="service" id="App\Form\ServiceType"/>
         <argument key="App\Form\Users1Type" type="service" id="App\Form\Users1Type"/>
@@ -4998,6 +5019,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\CategoryController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\CategoryController"/>
+      <argument>App\Controller\CategoryController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
     <service id=".service_locator.KTVqfp6.App\Controller\Client_Create_Account" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\Client_Create_Account"/>
       <argument>App\Controller\Client_Create_Account</argument>
@@ -5168,11 +5195,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.NZcyyGq"/>
+      <argument type="service" id=".service_locator.8f40GG5"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id=".errored..service_locator.alodU2Q.App\Entity\Addresses" class="App\Entity\Addresses"/>
+    <service id=".errored..service_locator..JzDQIR.App\Entity\Category" class="App\Entity\Category"/>
     <service id=".errored..service_locator.8z1HQm8.App\Entity\Groups" class="App\Entity\Groups"/>
     <service id=".errored..service_locator..7DLMsk.App\Entity\Service" class="App\Entity\Service"/>
     <service id=".errored..service_locator.CLREBB2.App\Entity\Users" class="App\Entity\Users"/>
@@ -5514,7 +5542,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface" alias="webpack_encore.entrypoint_lookup_collection" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.NZcyyGq"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.8f40GG5"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".service_locator.tSKDlY7" alias=".1_ServiceLocator~GrBGLNF" public="false"/>

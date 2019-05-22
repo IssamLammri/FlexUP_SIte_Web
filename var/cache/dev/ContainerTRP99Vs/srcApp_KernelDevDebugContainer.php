@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerRXJSom7;
+namespace ContainerTRP99Vs;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -58,6 +58,7 @@ class srcApp_KernelDevDebugContainer extends Container
         ];
         $this->fileMap = [
             'App\\Controller\\AddressesController' => 'getAddressesControllerService.php',
+            'App\\Controller\\CategoryController' => 'getCategoryControllerService.php',
             'App\\Controller\\Client_Create_Account' => 'getClientCreateAccountService.php',
             'App\\Controller\\Commande' => 'getCommandeService.php',
             'App\\Controller\\Connexion' => 'getConnexionService.php',
@@ -70,6 +71,7 @@ class srcApp_KernelDevDebugContainer extends Container
             'App\\Controller\\Panier' => 'getPanierService.php',
             'App\\Controller\\ServiceController' => 'getServiceControllerService.php',
             'App\\Controller\\UsersController' => 'getUsersControllerService.php',
+            'App\\Controller\\ZoneController' => 'getZoneControllerService.php',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController' => 'getRedirectControllerService.php',
             'Symfony\\Bundle\\FrameworkBundle\\Controller\\TemplateController' => 'getTemplateControllerService.php',
             'cache.app_clearer' => 'getCache_AppClearerService.php',
@@ -508,9 +510,6 @@ class srcApp_KernelDevDebugContainer extends Container
             return ($this->privates['data_collector.request'] ?? ($this->privates['data_collector.request'] = new \Symfony\Component\HttpKernel\DataCollector\RequestDataCollector()));
         }, 1 => 'onKernelResponse'], 0);
         $instance->addListener('kernel.request', [0 => function () {
-            return ($this->privates['debug.debug_handlers_listener'] ?? $this->getDebug_DebugHandlersListenerService());
-        }, 1 => 'configure'], 2048);
-        $instance->addListener('console.command', [0 => function () {
             return ($this->privates['debug.debug_handlers_listener'] ?? $this->getDebug_DebugHandlersListenerService());
         }, 1 => 'configure'], 2048);
         $instance->addListener('kernel.request', [0 => function () {
