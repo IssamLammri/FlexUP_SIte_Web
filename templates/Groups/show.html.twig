@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Groups{% endblock %}
+
+{% block body %}
+    <h1>Groups</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdGroup</th>
+                <td>{{ group.idGroup }}</td>
+            </tr>
+            <tr>
+                <th>Points</th>
+                <td>{{ group.points }}</td>
+            </tr>
+            <tr>
+                <th>Star</th>
+                <td>{{ group.star }}</td>
+            </tr>
+            <tr>
+                <th>GroupName</th>
+                <td>{{ group.groupName }}</td>
+            </tr>
+            <tr>
+                <th>IsFlexible</th>
+                <td>{{ group.isFlexible ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>IsRegistered</th>
+                <td>{{ group.isRegistered ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>RegistrationName</th>
+                <td>{{ group.registrationName }}</td>
+            </tr>
+            <tr>
+                <th>RegistrationNumber</th>
+                <td>{{ group.registrationNumber }}</td>
+            </tr>
+            <tr>
+                <th>RegistrationCountry</th>
+                <td>{{ group.registrationCountry }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('groups_index') }}">back to list</a>
+
+    <a href="{{ path('groups_edit', {'idGroup': group.idGroup}) }}">edit</a>
+
+    {{ include('groups/_delete_form.html.twig') }}
+{% endblock %}

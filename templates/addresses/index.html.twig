@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Addresses index{% endblock %}
+
+{% block body %}
+    <h1>Addresses index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdAddress</th>
+                <th>IsGroup</th>
+                <th>AddressLabel</th>
+                <th>ContactName</th>
+                <th>OrganisationName</th>
+                <th>DepartmentName</th>
+                <th>Address1</th>
+                <th>Address2</th>
+                <th>City</th>
+                <th>PostCode</th>
+                <th>State</th>
+                <th>Country</th>
+                <th>AccessDetails</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for address in addresses %}
+            <tr>
+                <td>{{ address.idAddress }}</td>
+                <td>{{ address.isGroup ? 'Yes' : 'No' }}</td>
+                <td>{{ address.addressLabel }}</td>
+                <td>{{ address.contactName }}</td>
+                <td>{{ address.organisationName }}</td>
+                <td>{{ address.departmentName }}</td>
+                <td>{{ address.address1 }}</td>
+                <td>{{ address.address2 }}</td>
+                <td>{{ address.city }}</td>
+                <td>{{ address.postCode }}</td>
+                <td>{{ address.state }}</td>
+                <td>{{ address.country }}</td>
+                <td>{{ address.accessDetails }}</td>
+                <td>
+                    <a href="{{ path('addresses_show', {'idAddress': address.idAddress}) }}">show</a>
+                    <a href="{{ path('addresses_edit', {'idAddress': address.idAddress}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="14">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('addresses_new') }}">Create new</a>
+{% endblock %}
