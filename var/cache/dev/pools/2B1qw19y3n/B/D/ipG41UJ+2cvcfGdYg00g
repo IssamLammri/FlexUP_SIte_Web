@@ -10,7 +10,7 @@
         [
             'stdClass' => [
                 'targetEntity' => [
-                    'Orders',
+                    'Enquiry',
                 ],
                 'value' => [
                     1 => [
