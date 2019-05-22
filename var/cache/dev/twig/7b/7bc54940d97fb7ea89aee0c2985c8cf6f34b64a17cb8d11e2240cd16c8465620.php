@@ -148,49 +148,21 @@ class __TwigTemplate_de0ad2eff53eae75d8ec4b71a72ca63b3b6fa25615ead9e0694a2c7ba92
         echo ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 44, $this->source); })()), "isPro", [], "any", false, false, false, 44)) ? ("Yes") : ("No"));
         echo "</td>
             </tr>
-            <tr>
-                <th>PidNumber</th>
-                <td>";
-        // line 48
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 48, $this->source); })()), "pidNumber", [], "any", false, false, false, 48), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>PidExpirationDate</th>
-                <td>";
-        // line 52
-        ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 52, $this->source); })()), "pidExpirationDate", [], "any", false, false, false, 52)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 52, $this->source); })()), "pidExpirationDate", [], "any", false, false, false, 52), "Y-m-d"), "html", null, true))) : (print ("")));
-        echo "</td>
-            </tr>
-            <tr>
-                <th>PidEmissionEntity</th>
-                <td>";
-        // line 56
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 56, $this->source); })()), "pidEmissionEntity", [], "any", false, false, false, 56), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>SSN</th>
-                <td>";
-        // line 60
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 60, $this->source); })()), "sSN", [], "any", false, false, false, 60), "html", null, true);
-        echo "</td>
-            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 65
+        // line 49
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 67
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_edit", ["idUser" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 67, $this->source); })()), "idUser", [], "any", false, false, false, 67)]), "html", null, true);
+        // line 51
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_edit", ["idUser" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 51, $this->source); })()), "idUser", [], "any", false, false, false, 51)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 69
+        // line 53
         echo twig_include($this->env, $context, "users/_delete_form.html.twig");
         echo "
 ";
@@ -214,7 +186,7 @@ class __TwigTemplate_de0ad2eff53eae75d8ec4b71a72ca63b3b6fa25615ead9e0694a2c7ba92
 
     public function getDebugInfo()
     {
-        return array (  194 => 69,  189 => 67,  184 => 65,  176 => 60,  169 => 56,  162 => 52,  155 => 48,  148 => 44,  141 => 40,  134 => 36,  127 => 32,  120 => 28,  113 => 24,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  166 => 53,  161 => 51,  156 => 49,  148 => 44,  141 => 40,  134 => 36,  127 => 32,  120 => 28,  113 => 24,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -263,22 +235,6 @@ class __TwigTemplate_de0ad2eff53eae75d8ec4b71a72ca63b3b6fa25615ead9e0694a2c7ba92
             <tr>
                 <th>IsPro</th>
                 <td>{{ user.isPro ? 'Yes' : 'No' }}</td>
-            </tr>
-            <tr>
-                <th>PidNumber</th>
-                <td>{{ user.pidNumber }}</td>
-            </tr>
-            <tr>
-                <th>PidExpirationDate</th>
-                <td>{{ user.pidExpirationDate ? user.pidExpirationDate|date('Y-m-d') : '' }}</td>
-            </tr>
-            <tr>
-                <th>PidEmissionEntity</th>
-                <td>{{ user.pidEmissionEntity }}</td>
-            </tr>
-            <tr>
-                <th>SSN</th>
-                <td>{{ user.sSN }}</td>
             </tr>
         </tbody>
     </table>

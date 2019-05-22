@@ -10,7 +10,8 @@
             <tr>
                 <th>IdService</th>
                 <th>NameService</th>
-                <th>NumberForm</th>
+                <th>Level</th>
+                <th>Unit</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -19,7 +20,8 @@
             <tr>
                 <td>{{ service.idService }}</td>
                 <td>{{ service.nameService }}</td>
-                <td>{{ service.numberForm }}</td>
+                <td>{{ service.level }}</td>
+                <td>{{ service.unit }}</td>
                 <td>
                     <a href="{{ path('service_show', {'idService': service.idService}) }}">show</a>
                     <a href="{{ path('service_edit', {'idService': service.idService}) }}">edit</a>
@@ -27,7 +29,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="4">no records found</td>
+                <td colspan="5">no records found</td>
             </tr>
         {% endfor %}
         </tbody>

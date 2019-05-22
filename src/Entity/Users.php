@@ -78,34 +78,6 @@ class Users
     private $isPro;
 
     /**
-     * @var string|null
-     *
-     * @ORM\Column(name="PID_Number", type="string", length=50, nullable=true)
-     */
-    private $pidNumber;
-
-    /**
-     * @var \DateTime|null
-     *
-     * @ORM\Column(name="PID_Expiration_Date", type="date", nullable=true)
-     */
-    private $pidExpirationDate;
-
-    /**
-     * @var string|null
-     *
-     * @ORM\Column(name="PID_Emission_Entity", type="string", length=100, nullable=true)
-     */
-    private $pidEmissionEntity;
-
-    /**
-     * @var int|null
-     *
-     * @ORM\Column(name="S_S_N", type="integer", nullable=true)
-     */
-    private $sSN;
-
-    /**
      * @var \Addresses
      *
      * @ORM\ManyToOne(targetEntity="Addresses")
@@ -222,54 +194,6 @@ class Users
     public function setIsPro(?bool $isPro): self
     {
         $this->isPro = $isPro;
-
-        return $this;
-    }
-
-    public function getPidNumber(): ?string
-    {
-        return $this->pidNumber;
-    }
-
-    public function setPidNumber(?string $pidNumber): self
-    {
-        $this->pidNumber = $pidNumber;
-
-        return $this;
-    }
-
-    public function getPidExpirationDate(): ?\DateTimeInterface
-    {
-        return $this->pidExpirationDate;
-    }
-
-    public function setPidExpirationDate(?\DateTimeInterface $pidExpirationDate): self
-    {
-        $this->pidExpirationDate = $pidExpirationDate;
-
-        return $this;
-    }
-
-    public function getPidEmissionEntity(): ?string
-    {
-        return $this->pidEmissionEntity;
-    }
-
-    public function setPidEmissionEntity(?string $pidEmissionEntity): self
-    {
-        $this->pidEmissionEntity = $pidEmissionEntity;
-
-        return $this;
-    }
-
-    public function getSSN(): ?int
-    {
-        return $this->sSN;
-    }
-
-    public function setSSN(?int $sSN): self
-    {
-        $this->sSN = $sSN;
 
         return $this;
     }

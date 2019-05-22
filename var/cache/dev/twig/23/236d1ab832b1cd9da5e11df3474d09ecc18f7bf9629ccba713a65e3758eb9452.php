@@ -84,7 +84,10 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         echo "
     <div class=\"container\">
         <h1> Issam </h1>
-        <a class=\"btn btn-outline-dark\" href=\"#\"> Users </a>
+        <a class=\"btn btn-outline-dark\" href=\"";
+        // line 9
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_index");
+        echo "\"> Users </a>
         <a class=\"btn btn-outline-dark\" href=\"#\"> Groups </a>
         <a class=\"btn btn-outline-dark\" href=\"#\"> Address </a>
         <a class=\"btn btn-outline-dark\" href=\"#\"> Service </a>
@@ -117,7 +120,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
     public function getDebugInfo()
     {
-        return array (  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -130,7 +133,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
     <div class=\"container\">
         <h1> Issam </h1>
-        <a class=\"btn btn-outline-dark\" href=\"#\"> Users </a>
+        <a class=\"btn btn-outline-dark\" href=\"{{ path('users_index') }}\"> Users </a>
         <a class=\"btn btn-outline-dark\" href=\"#\"> Groups </a>
         <a class=\"btn btn-outline-dark\" href=\"#\"> Address </a>
         <a class=\"btn btn-outline-dark\" href=\"#\"> Service </a>

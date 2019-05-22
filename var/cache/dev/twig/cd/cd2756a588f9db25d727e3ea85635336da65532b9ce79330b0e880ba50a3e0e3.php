@@ -62,7 +62,7 @@ class __TwigTemplate_29c3af0913dbcd350c0521409359c730dda09dfe96221910479db928b0b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Users";
+        echo "Edit Users";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -125,7 +125,7 @@ class __TwigTemplate_29c3af0913dbcd350c0521409359c730dda09dfe96221910479db928b0b
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Users{% endblock %}
+{% block title %}Edit Users{% endblock %}
 
 {% block body %}
     <h1>Edit Users</h1>
