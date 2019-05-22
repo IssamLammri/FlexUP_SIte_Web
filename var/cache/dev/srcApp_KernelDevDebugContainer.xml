@@ -481,6 +481,13 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\UsersController"/>
       </call>
     </service>
+    <service id="App\Controller\ZoneController" class="App\Controller\ZoneController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\ZoneController"/>
+      </call>
+    </service>
     <service id="App\Form\AddressesType" class="App\Form\AddressesType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -494,6 +501,9 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Form\UsersType" class="App\Form\UsersType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="App\Form\ZoneType" class="App\Form\ZoneType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
@@ -760,6 +770,7 @@
         <argument>App\Form\ServiceType</argument>
         <argument>App\Form\Users1Type</argument>
         <argument>App\Form\UsersType</argument>
+        <argument>App\Form\ZoneType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
@@ -1005,7 +1016,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.7veAhjt"/>
+      <argument type="service" id=".service_locator.oa6V3VP"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -4474,6 +4485,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\UsersController" class="App\Controller\UsersController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ZoneController" class="App\Controller\ZoneController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ZoneController" class="App\Controller\ZoneController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ZoneController" class="App\Controller\ZoneController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AddressesType" class="App\Form\AddressesType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AddressesType" class="App\Form\AddressesType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\GroupsType" class="App\Form\GroupsType" autowire="true" abstract="true"/>
@@ -4484,6 +4498,8 @@
     <service id=".abstract.instanceof.App\Form\Users1Type" class="App\Form\Users1Type" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\UsersType" class="App\Form\UsersType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\UsersType" class="App\Form\UsersType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ZoneType" class="App\Form\ZoneType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ZoneType" class="App\Form\ZoneType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="maker.auto_command.make_auth" class="Symfony\Bundle\MakerBundle\Command\MakerCommand" public="false">
       <tag name="console.command" command="make:auth"/>
       <argument type="service" id="maker.maker.make_authenticator"/>
@@ -4670,7 +4686,13 @@
         <argument key="user" type="service" id=".errored..service_locator.CLREBB2.App\Entity\Users"/>
       </argument>
     </service>
-    <service id=".service_locator.PkyStot" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.dnczLyX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="zone" type="service" id=".errored..service_locator.dnczLyX.App\Entity\Zone"/>
+      </argument>
+    </service>
+    <service id=".service_locator.NZcyyGq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AddressesController::delete" type="service" id=".service_locator.alodU2Q"/>
@@ -4685,6 +4707,9 @@
         <argument key="App\Controller\UsersController::delete" type="service" id=".service_locator.CLREBB2"/>
         <argument key="App\Controller\UsersController::edit" type="service" id=".service_locator.CLREBB2"/>
         <argument key="App\Controller\UsersController::show" type="service" id=".service_locator.CLREBB2"/>
+        <argument key="App\Controller\ZoneController::delete" type="service" id=".service_locator.dnczLyX"/>
+        <argument key="App\Controller\ZoneController::edit" type="service" id=".service_locator.dnczLyX"/>
+        <argument key="App\Controller\ZoneController::show" type="service" id=".service_locator.dnczLyX"/>
         <argument key="App\Controller\AddressesController:delete" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\AddressesController:edit" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\AddressesController:show" type="service" id=".service_locator.alodU2Q"/>
@@ -4697,6 +4722,9 @@
         <argument key="App\Controller\UsersController:delete" type="service" id=".service_locator.CLREBB2"/>
         <argument key="App\Controller\UsersController:edit" type="service" id=".service_locator.CLREBB2"/>
         <argument key="App\Controller\UsersController:show" type="service" id=".service_locator.CLREBB2"/>
+        <argument key="App\Controller\ZoneController:delete" type="service" id=".service_locator.dnczLyX"/>
+        <argument key="App\Controller\ZoneController:edit" type="service" id=".service_locator.dnczLyX"/>
+        <argument key="App\Controller\ZoneController:show" type="service" id=".service_locator.dnczLyX"/>
       </argument>
     </service>
     <service id=".service_locator.37xBtZ2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4768,7 +4796,7 @@
       <argument type="service" id="debug.argument_resolver.variadic.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.7veAhjt" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.oa6V3VP" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AddressesType" type="service" id="App\Form\AddressesType"/>
@@ -4776,6 +4804,7 @@
         <argument key="App\Form\ServiceType" type="service" id="App\Form\ServiceType"/>
         <argument key="App\Form\Users1Type" type="service" id="App\Form\Users1Type"/>
         <argument key="App\Form\UsersType" type="service" id="App\Form\UsersType"/>
+        <argument key="App\Form\ZoneType" type="service" id="App\Form\ZoneType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
@@ -5041,6 +5070,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\ZoneController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ZoneController"/>
+      <argument>App\Controller\ZoneController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
     <service id=".service_locator._pu.0Tb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5133,7 +5168,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.PkyStot"/>
+      <argument type="service" id=".service_locator.NZcyyGq"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5141,6 +5176,7 @@
     <service id=".errored..service_locator.8z1HQm8.App\Entity\Groups" class="App\Entity\Groups"/>
     <service id=".errored..service_locator..7DLMsk.App\Entity\Service" class="App\Entity\Service"/>
     <service id=".errored..service_locator.CLREBB2.App\Entity\Users" class="App\Entity\Users"/>
+    <service id=".errored..service_locator.dnczLyX.App\Entity\Zone" class="App\Entity\Zone"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator._8xViNp"/>
       <argument type="collection">
@@ -5478,7 +5514,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface" alias="webpack_encore.entrypoint_lookup_collection" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.PkyStot"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.NZcyyGq"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".service_locator.tSKDlY7" alias=".1_ServiceLocator~GrBGLNF" public="false"/>
