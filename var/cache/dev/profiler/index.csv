@@ -390,3 +390,11 @@ e61a8f,::1,GET,http://localhost:8000/addresses/1/edit,1558536365,,500
 b1c9c0,::1,GET,http://localhost:8000/addresses/1/edit,1558536368,5b46c7,200
 5b46c7,::1,GET,http://localhost:8000/addresses/1/edit,1558536368,,500
 c9a465,::1,GET,http://localhost:8000/addresses/,1558536372,,200
+f58e08,::1,GET,http://localhost:8000/users/,1558539472,,200
+604ecb,::1,GET,http://localhost:8000/Issam,1558539476,,200
+38c79f,::1,GET,http://localhost:8000/enquiry/,1558539480,,200
+f2d3b5,::1,GET,http://localhost:8000/addresses/,1558539484,,200
+6920c5,::1,GET,http://localhost:8000/service/,1558539486,,200
+6606df,::1,GET,http://localhost:8000/service/1,1558539489,,200
+1eb19a,::1,GET,http://localhost:8000/service/1/edit,1558539495,da3085,200
+da3085,::1,GET,http://localhost:8000/service/1/edit,1558539495,,500

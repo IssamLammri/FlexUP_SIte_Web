@@ -88,39 +88,44 @@ class __TwigTemplate_021793b60ee7d59f7ecf23c564ae93d33ef609727592c93a45a69eff527
             <tr>
                 <th>IdService</th>
                 <th>NameService</th>
-                <th>NumberForm</th>
+                <th>Level</th>
+                <th>Unit</th>
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 18
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["services"]) || array_key_exists("services", $context) ? $context["services"] : (function () { throw new RuntimeError('Variable "services" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["services"]) || array_key_exists("services", $context) ? $context["services"] : (function () { throw new RuntimeError('Variable "services" does not exist.', 19, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["service"]) {
-            // line 19
+            // line 20
             echo "            <tr>
                 <td>";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "idService", [], "any", false, false, false, 20), "html", null, true);
-            echo "</td>
-                <td>";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "nameService", [], "any", false, false, false, 21), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "idService", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
                 <td>";
             // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "numberForm", [], "any", false, false, false, 22), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "nameService", [], "any", false, false, false, 22), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "level", [], "any", false, false, false, 23), "html", null, true);
+            echo "</td>
+                <td>";
+            // line 24
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "unit", [], "any", false, false, false, 24), "html", null, true);
             echo "</td>
                 <td>
                     <a href=\"";
-            // line 24
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_show", ["idService" => twig_get_attribute($this->env, $this->source, $context["service"], "idService", [], "any", false, false, false, 24)]), "html", null, true);
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_show", ["idService" => twig_get_attribute($this->env, $this->source, $context["service"], "idService", [], "any", false, false, false, 26)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 25
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_edit", ["idService" => twig_get_attribute($this->env, $this->source, $context["service"], "idService", [], "any", false, false, false, 25)]), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_edit", ["idService" => twig_get_attribute($this->env, $this->source, $context["service"], "idService", [], "any", false, false, false, 27)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -128,21 +133,21 @@ class __TwigTemplate_021793b60ee7d59f7ecf23c564ae93d33ef609727592c93a45a69eff527
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 29
+            // line 31
             echo "            <tr>
-                <td colspan=\"4\">no records found</td>
+                <td colspan=\"5\">no records found</td>
             </tr>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['service'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 35
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 36
+        // line 38
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("service_new");
         echo "\">Create new</a>
 ";
@@ -166,7 +171,7 @@ class __TwigTemplate_021793b60ee7d59f7ecf23c564ae93d33ef609727592c93a45a69eff527
 
     public function getDebugInfo()
     {
-        return array (  146 => 36,  141 => 33,  132 => 29,  123 => 25,  119 => 24,  114 => 22,  110 => 21,  106 => 20,  103 => 19,  98 => 18,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  151 => 38,  146 => 35,  137 => 31,  128 => 27,  124 => 26,  119 => 24,  115 => 23,  111 => 22,  107 => 21,  104 => 20,  99 => 19,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -183,7 +188,8 @@ class __TwigTemplate_021793b60ee7d59f7ecf23c564ae93d33ef609727592c93a45a69eff527
             <tr>
                 <th>IdService</th>
                 <th>NameService</th>
-                <th>NumberForm</th>
+                <th>Level</th>
+                <th>Unit</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -192,7 +198,8 @@ class __TwigTemplate_021793b60ee7d59f7ecf23c564ae93d33ef609727592c93a45a69eff527
             <tr>
                 <td>{{ service.idService }}</td>
                 <td>{{ service.nameService }}</td>
-                <td>{{ service.numberForm }}</td>
+                <td>{{ service.level }}</td>
+                <td>{{ service.unit }}</td>
                 <td>
                     <a href=\"{{ path('service_show', {'idService': service.idService}) }}\">show</a>
                     <a href=\"{{ path('service_edit', {'idService': service.idService}) }}\">edit</a>
@@ -200,7 +207,7 @@ class __TwigTemplate_021793b60ee7d59f7ecf23c564ae93d33ef609727592c93a45a69eff527
             </tr>
         {% else %}
             <tr>
-                <td colspan=\"4\">no records found</td>
+                <td colspan=\"5\">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
@@ -208,6 +215,6 @@ class __TwigTemplate_021793b60ee7d59f7ecf23c564ae93d33ef609727592c93a45a69eff527
 
     <a href=\"{{ path('service_new') }}\">Create new</a>
 {% endblock %}
-", "service/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP\\templates\\service\\index.html.twig");
+", "service/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\service\\index.html.twig");
     }
 }

@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Enquiry index{% endblock %}
+
+{% block body %}
+    <h1>Enquiry index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdOrder</th>
+                <th>NameClient</th>
+                <th>NameService</th>
+                <th>NameZone</th>
+                <th>OrderDate</th>
+                <th>Delivery</th>
+                <th>Urgency</th>
+                <th>Experience</th>
+                <th>Unit</th>
+                <th>Currency</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>IsGroup</th>
+                <th>NameGroup</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for enquiry in enquiries %}
+            <tr>
+                <td>{{ enquiry.idOrder }}</td>
+                <td>{{ enquiry.nameClient }}</td>
+                <td>{{ enquiry.nameService }}</td>
+                <td>{{ enquiry.nameZone }}</td>
+                <td>{{ enquiry.orderDate ? enquiry.orderDate|date('Y-m-d') : '' }}</td>
+                <td>{{ enquiry.delivery }}</td>
+                <td>{{ enquiry.urgency }}</td>
+                <td>{{ enquiry.experience }}</td>
+                <td>{{ enquiry.unit }}</td>
+                <td>{{ enquiry.currency }}</td>
+                <td>{{ enquiry.quantity }}</td>
+                <td>{{ enquiry.price }}</td>
+                <td>{{ enquiry.isGroup ? 'Yes' : 'No' }}</td>
+                <td>{{ enquiry.nameGroup }}</td>
+                <td>
+                    <a href="{{ path('enquiry_show', {'idOrder': enquiry.idOrder}) }}">show</a>
+                    <a href="{{ path('enquiry_edit', {'idOrder': enquiry.idOrder}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="15">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('enquiry_new') }}">Create new</a>
+{% endblock %}

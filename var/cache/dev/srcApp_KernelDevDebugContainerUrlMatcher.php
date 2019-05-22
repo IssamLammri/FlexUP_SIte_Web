@@ -27,6 +27,8 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/createaccount' => [[['_route' => 'creataccount', '_controller' => 'App\\Controller\\Client_Create_Account::index'], null, null, null, false, false, null]],
             '/commande' => [[['_route' => 'Commande', '_controller' => 'App\\Controller\\Commande::index'], null, null, null, false, false, null]],
             '/connexion' => [[['_route' => 'Connexion', '_controller' => 'App\\Controller\\Connexion::index'], null, null, null, false, false, null]],
+            '/enquiry' => [[['_route' => 'enquiry_index', '_controller' => 'App\\Controller\\EnquiryController::index'], null, ['GET' => 0], null, true, false, null]],
+            '/enquiry/new' => [[['_route' => 'enquiry_new', '_controller' => 'App\\Controller\\EnquiryController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
             '/groupes' => [[['_route' => 'Groupes', '_controller' => 'App\\Controller\\Groupes::index'], null, null, null, false, false, null]],
             '/groups' => [[['_route' => 'groups_index', '_controller' => 'App\\Controller\\GroupsController::index'], null, ['GET' => 0], null, true, false, null]],
             '/groups/new' => [[['_route' => 'groups_new', '_controller' => 'App\\Controller\\GroupsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -69,25 +71,30 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                         .'|/edit(*:255)'
                         .'|(*:263)'
                     .')'
-                    .'|/groups/([^/]++)(?'
-                        .'|(*:291)'
-                        .'|/edit(*:304)'
-                        .'|(*:312)'
+                    .'|/enquiry/([^/]++)(?'
+                        .'|(*:292)'
+                        .'|/edit(*:305)'
+                        .'|(*:313)'
                     .')'
-                    .'|/service/([^/]++)(?'
+                    .'|/groups/([^/]++)(?'
                         .'|(*:341)'
                         .'|/edit(*:354)'
                         .'|(*:362)'
                     .')'
+                    .'|/service/([^/]++)(?'
+                        .'|(*:391)'
+                        .'|/edit(*:404)'
+                        .'|(*:412)'
+                    .')'
                     .'|/users/([^/]++)(?'
-                        .'|(*:389)'
-                        .'|/edit(*:402)'
-                        .'|(*:410)'
+                        .'|(*:439)'
+                        .'|/edit(*:452)'
+                        .'|(*:460)'
                     .')'
                     .'|/zone/([^/]++)(?'
-                        .'|(*:436)'
-                        .'|/edit(*:449)'
-                        .'|(*:457)'
+                        .'|(*:486)'
+                        .'|/edit(*:499)'
+                        .'|(*:507)'
                     .')'
                 .')/?$}sDu',
         ];
@@ -105,18 +112,21 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             242 => [[['_route' => 'category_show', '_controller' => 'App\\Controller\\CategoryController::show'], ['idCategory'], ['GET' => 0], null, false, true, null]],
             255 => [[['_route' => 'category_edit', '_controller' => 'App\\Controller\\CategoryController::edit'], ['idCategory'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
             263 => [[['_route' => 'category_delete', '_controller' => 'App\\Controller\\CategoryController::delete'], ['idCategory'], ['DELETE' => 0], null, false, true, null]],
-            291 => [[['_route' => 'groups_show', '_controller' => 'App\\Controller\\GroupsController::show'], ['idGroup'], ['GET' => 0], null, false, true, null]],
-            304 => [[['_route' => 'groups_edit', '_controller' => 'App\\Controller\\GroupsController::edit'], ['idGroup'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            312 => [[['_route' => 'groups_delete', '_controller' => 'App\\Controller\\GroupsController::delete'], ['idGroup'], ['DELETE' => 0], null, false, true, null]],
-            341 => [[['_route' => 'service_show', '_controller' => 'App\\Controller\\ServiceController::show'], ['idService'], ['GET' => 0], null, false, true, null]],
-            354 => [[['_route' => 'service_edit', '_controller' => 'App\\Controller\\ServiceController::edit'], ['idService'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            362 => [[['_route' => 'service_delete', '_controller' => 'App\\Controller\\ServiceController::delete'], ['idService'], ['DELETE' => 0], null, false, true, null]],
-            389 => [[['_route' => 'users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['idUser'], ['GET' => 0], null, false, true, null]],
-            402 => [[['_route' => 'users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['idUser'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            410 => [[['_route' => 'users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['idUser'], ['DELETE' => 0], null, false, true, null]],
-            436 => [[['_route' => 'zone_show', '_controller' => 'App\\Controller\\ZoneController::show'], ['idZone'], ['GET' => 0], null, false, true, null]],
-            449 => [[['_route' => 'zone_edit', '_controller' => 'App\\Controller\\ZoneController::edit'], ['idZone'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            457 => [[['_route' => 'zone_delete', '_controller' => 'App\\Controller\\ZoneController::delete'], ['idZone'], ['DELETE' => 0], null, false, true, null]],
+            292 => [[['_route' => 'enquiry_show', '_controller' => 'App\\Controller\\EnquiryController::show'], ['idOrder'], ['GET' => 0], null, false, true, null]],
+            305 => [[['_route' => 'enquiry_edit', '_controller' => 'App\\Controller\\EnquiryController::edit'], ['idOrder'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            313 => [[['_route' => 'enquiry_delete', '_controller' => 'App\\Controller\\EnquiryController::delete'], ['idOrder'], ['DELETE' => 0], null, false, true, null]],
+            341 => [[['_route' => 'groups_show', '_controller' => 'App\\Controller\\GroupsController::show'], ['idGroup'], ['GET' => 0], null, false, true, null]],
+            354 => [[['_route' => 'groups_edit', '_controller' => 'App\\Controller\\GroupsController::edit'], ['idGroup'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            362 => [[['_route' => 'groups_delete', '_controller' => 'App\\Controller\\GroupsController::delete'], ['idGroup'], ['DELETE' => 0], null, false, true, null]],
+            391 => [[['_route' => 'service_show', '_controller' => 'App\\Controller\\ServiceController::show'], ['idService'], ['GET' => 0], null, false, true, null]],
+            404 => [[['_route' => 'service_edit', '_controller' => 'App\\Controller\\ServiceController::edit'], ['idService'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            412 => [[['_route' => 'service_delete', '_controller' => 'App\\Controller\\ServiceController::delete'], ['idService'], ['DELETE' => 0], null, false, true, null]],
+            439 => [[['_route' => 'users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['idUser'], ['GET' => 0], null, false, true, null]],
+            452 => [[['_route' => 'users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['idUser'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            460 => [[['_route' => 'users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['idUser'], ['DELETE' => 0], null, false, true, null]],
+            486 => [[['_route' => 'zone_show', '_controller' => 'App\\Controller\\ZoneController::show'], ['idZone'], ['GET' => 0], null, false, true, null]],
+            499 => [[['_route' => 'zone_edit', '_controller' => 'App\\Controller\\ZoneController::edit'], ['idZone'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            507 => [[['_route' => 'zone_delete', '_controller' => 'App\\Controller\\ZoneController::delete'], ['idZone'], ['DELETE' => 0], null, false, true, null]],
         ];
     }
 }

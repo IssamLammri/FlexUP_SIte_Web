@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Enquiry{% endblock %}
+
+{% block body %}
+    <h1>Edit Enquiry</h1>
+
+    {{ include('enquiry/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('enquiry_index') }}">back to list</a>
+
+    {{ include('enquiry/_delete_form.html.twig') }}
+{% endblock %}
