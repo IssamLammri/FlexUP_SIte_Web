@@ -505,3 +505,11 @@ d00617,::1,GET,http://localhost:8000/users/?idUser=1,1558607923,,200
 5f67c2,::1,GET,http://localhost:8000/users/new,1558608447,,200
 9e1f23,::1,GET,http://localhost:8000/Issam,1558608507,,200
 d01b91,::1,GET,http://localhost:8000/users/new,1558608509,,200
+9e1b78,::1,GET,http://localhost:8000/users/new,1558610118,,200
+a2491d,::1,GET,http://localhost:8000/users,1558610121,,301
+f457c2,::1,GET,http://localhost:8000/users/,1558610121,,200
+9a905e,::1,GET,http://localhost:8000/users/2,1558610125,,200
+bddead,::1,GET,http://localhost:8000/users/4,1558610237,,200
+8a41c3,::1,GET,http://localhost:8000/users/8,1558610241,53b1f2,200
+53b1f2,::1,GET,http://localhost:8000/users/8,1558610241,,404
+febecb,::1,GET,http://localhost:8000/users/,1558610247,,200
