@@ -221,6 +221,12 @@ class Users
 
         return $this;
     }
+    public function __toString()
+    {
+        $chaine = (string)$this->getIdUser();
+        return $chaine;
+
+    }
 
 
 }

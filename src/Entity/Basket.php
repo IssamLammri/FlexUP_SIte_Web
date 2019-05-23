@@ -167,6 +167,11 @@ class Basket
 
         return $this;
     }
+    public function __toString()
+    {
+        $chaine = (string)$this->getIdBasket();
+        return $chaine;
+    }
 
 
 }

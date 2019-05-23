@@ -243,6 +243,10 @@ class Groups
 
         return $this;
     }
+    public function __toString()
+    {
+        return $this->groupName;
+    }
 
 
 }

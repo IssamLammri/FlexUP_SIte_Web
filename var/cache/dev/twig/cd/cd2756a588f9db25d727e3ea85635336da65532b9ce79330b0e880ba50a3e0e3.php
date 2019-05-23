@@ -167,6 +167,6 @@ class __TwigTemplate_29c3af0913dbcd350c0521409359c730dda09dfe96221910479db928b0b
 
     <a type=\"button\" class=\"btn btn-danger\" >{{ include('users/_delete_form.html.twig') }}</a>
 {% endblock %}
-", "users/edit.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP\\templates\\users\\edit.html.twig");
+", "users/edit.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\users\\edit.html.twig");
     }
 }

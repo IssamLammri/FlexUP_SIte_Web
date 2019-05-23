@@ -297,6 +297,12 @@ class Addresses
 
         return $this;
     }
+    public function __toString()
+    {
+        $chaine = (string)$this->getIdAddress();
+        //return $chaine;
+        return $this->address1;
+    }
 
 
 }

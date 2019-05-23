@@ -271,6 +271,7 @@
     <parameter key="twig.exception_listener.controller">twig.controller.exception::showAction</parameter>
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
+      <parameter>bootstrap_4_layout.html.twig</parameter>
     </parameter>
     <parameter key="twig.default_path">E:\UNIV le Havre\Stage\Site_Web\Site_Web\Site_Off\FlexUP_SIte_Web/templates</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
@@ -3764,10 +3765,11 @@
         <argument key="default_path">E:\UNIV le Havre\Stage\Site_Web\Site_Web\Site_Off\FlexUP_SIte_Web/templates</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
-        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="form_themes" type="collection">
           <argument>form_div_layout.html.twig</argument>
+          <argument>bootstrap_4_layout.html.twig</argument>
         </argument>
+        <argument key="exception_controller">twig.controller.exception::showAction</argument>
         <argument key="autoescape">name</argument>
         <argument key="cache">E:\UNIV le Havre\Stage\Site_Web\Site_Web\Site_Off\FlexUP_SIte_Web\var\cache\dev/twig</argument>
         <argument key="charset">UTF-8</argument>

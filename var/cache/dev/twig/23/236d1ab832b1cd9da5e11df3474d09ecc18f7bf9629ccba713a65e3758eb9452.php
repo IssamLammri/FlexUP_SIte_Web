@@ -112,11 +112,6 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("enquiry_index");
         echo "\"> Enquiry </a>
-
-
-
-
-
     </div>
 ";
         
@@ -159,11 +154,6 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         <a class=\"btn btn-outline-dark\" href=\"{{ path('category_index') }}\"> Category </a>
         <a class=\"btn btn-outline-dark\" href=\"{{ path('zone_index') }}\"> Zone de travaille </a>
         <a class=\"btn btn-outline-dark\" href=\"{{ path('enquiry_index') }}\"> Enquiry </a>
-
-
-
-
-
     </div>
 {% endblock %}", "Issam/issam.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\Issam\\issam.html.twig");
     }

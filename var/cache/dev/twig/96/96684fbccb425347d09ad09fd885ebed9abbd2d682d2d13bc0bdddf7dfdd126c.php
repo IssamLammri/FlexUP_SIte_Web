@@ -44,7 +44,7 @@ class __TwigTemplate_cb749a6ed1d60c5ca172a670f12e0680208095199e9bfad1adcf365e182
         // line 2
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
         echo "
-<button type=\"button\" class=\"btn btn-success\">";
+    <button  class=\"btn btn-success\">";
         // line 3
         echo twig_escape_filter($this->env, (((isset($context["button_label"]) || array_key_exists("button_label", $context))) ? (_twig_default_filter((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Save")) : ("Save")), "html", null, true);
         echo "</button>
@@ -80,8 +80,8 @@ class __TwigTemplate_cb749a6ed1d60c5ca172a670f12e0680208095199e9bfad1adcf365e182
     {
         return new Source("{{ form_start(form) }}
     {{ form_widget(form) }}
-<button type=\"button\" class=\"btn btn-success\">{{ button_label|default('Save') }}</button>
+    <button  class=\"btn btn-success\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "users/_form.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP\\templates\\users\\_form.html.twig");
+", "users/_form.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\users\\_form.html.twig");
     }
 }
