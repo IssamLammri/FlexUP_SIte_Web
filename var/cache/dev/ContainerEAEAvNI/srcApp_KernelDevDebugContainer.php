@@ -62,7 +62,7 @@ class srcApp_KernelDevDebugContainer extends Container
             'App\\Controller\\CategoryController' => 'getCategoryControllerService.php',
             'App\\Controller\\Client_Create_Account' => 'getClientCreateAccountService.php',
             'App\\Controller\\Commande' => 'getCommandeService.php',
-            'App\\Controller\\Connexion' => 'getConnexionService.php',
+            'App\\Controller\\SecurityController' => 'getConnexionService.php',
             'App\\Controller\\EnquiryController' => 'getEnquiryControllerService.php',
             'App\\Controller\\Groupes' => 'getGroupesService.php',
             'App\\Controller\\GroupsController' => 'getGroupsControllerService.php',

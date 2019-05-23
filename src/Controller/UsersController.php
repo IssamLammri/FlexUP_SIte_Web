@@ -41,6 +41,7 @@ class UsersController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
+            $this->addFlash('success','Vous avez bien ajouter votre compts');
 
             return $this->redirectToRoute('users_index');
         }
@@ -71,10 +72,12 @@ class UsersController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $this->getDoctrine()->getManager()->flush();
+            $this->addFlash('success','Vous avez bien modifée votre compts');
 
             return $this->redirectToRoute('users_index', [
                 'idUser' => $user->getIdUser(),
             ]);
+
         }
 
         return $this->render('users/edit.html.twig', [
@@ -92,6 +95,8 @@ class UsersController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->remove($user);
             $entityManager->flush();
+            $this->addFlash('success','Vous avez supprimé votre compts');
+
         }
 
         return $this->redirectToRoute('users_index');

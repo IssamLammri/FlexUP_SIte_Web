@@ -118,7 +118,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
         </a>
         <a class=\"btn btn-outline-light\" href=\"";
         // line 54
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Connexion");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\"> Connexion </a>
         <a class=\"btn btn-outline-light\" href=\"";
         // line 55
@@ -288,7 +288,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
         <a class=\"btn btn-outline-light\" href=\"{{ path('Panier') }}\"> Panier </a>
         <a class=\"btn btn-outline-light\" href=\"{{ path('users_new') }}\"> Inscription
         </a>
-        <a class=\"btn btn-outline-light\" href=\"{{ path('Connexion') }}\"> Connexion </a>
+        <a class=\"btn btn-outline-light\" href=\"{{ path('login') }}\"> Connexion </a>
         <a class=\"btn btn-outline-light\" href=\"{{ path('issam') }}\"> Issam </a>
     </li>
 </nav>

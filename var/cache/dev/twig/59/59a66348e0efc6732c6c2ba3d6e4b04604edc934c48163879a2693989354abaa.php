@@ -73,7 +73,7 @@ class __TwigTemplate_8b0675b68d6491d42d1db9a5cb145b2d3cf13347c45737cf5610ea484ea
                             <a class=\"nav-link\" href=\"";
         // line 20
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mygroups.index");
-        echo "\"> Connexion </a>
+        echo "\"> SecurityController </a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link\" href=\"#\">Link</a>
@@ -229,7 +229,7 @@ class __TwigTemplate_8b0675b68d6491d42d1db9a5cb145b2d3cf13347c45737cf5610ea484ea
                 <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
                     <ul class=\"navbar-nav mr-auto\">
                         <li class=\"nav-item \">
-                            <a class=\"nav-link\" href=\"{{ path('mygroups.index') }}\"> Connexion </a>
+                            <a class=\"nav-link\" href=\"{{ path('mygroups.index') }}\"> SecurityController </a>
                         </li>
                         <li class=\"nav-item\">
                             <a class=\"nav-link\" href=\"#\">Link</a>

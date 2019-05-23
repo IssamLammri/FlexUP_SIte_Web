@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Users
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="users", indexes={@ORM\Index(name="PID_Type", columns={"PID_Type"}), @ORM\Index(name="ID_Main_Address", columns={"ID_Main_Address"})})
  * @ORM\Entity
  */
-class Users
+class Users implements UserInterface,\Serializable
 {
     /**
      * @var int
@@ -229,4 +230,94 @@ class Users
     }
 
 
+    /**
+     * Returns the roles granted to the user.
+     *
+     *     public function getRoles()
+     *     {
+     *         return ['ROLE_USER'];
+     *     }
+     *
+     * Alternatively, the roles might be stored on a ``roles`` property,
+     * and populated in any number of different ways when the user object
+     * is created.
+     *
+     * @return (Role|string)[] The user roles
+     */
+    public function getRoles()
+    {
+        return ['ROLE_ADMIN'];
+    }
+
+    /**
+     * Returns the salt that was originally used to encode the password.
+     *
+     * This can return null if the password was not encoded using a salt.
+     *
+     * @return string|null The salt
+     */
+    public function getSalt()
+    {
+        return null;
+    }
+
+    /**
+     * Removes sensitive data from the user.
+     *
+     * This is important if, at any given point, sensitive information like
+     * the plain-text password is stored on this object.
+     */
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
+    /**
+     * String representation of object
+     * @link https://php.net/manual/en/serializable.serialize.php
+     * @return string the string representation of the object or null
+     * @since 5.1.0
+     */
+    public function serialize()
+    {
+        return serialize([
+            $this->idUser,
+            $this->firstName,
+            $this->lastName,
+            $this->password,
+            $this->email,
+            $this->emailConfirmed,
+            $this->mobile,
+            $this->isPro,
+            $this->userName,
+            $this->idMainAddress,
+            $this->pidType
+        ]);
+    }
+
+    /**
+     * Constructs the object
+     * @link https://php.net/manual/en/serializable.unserialize.php
+     * @param string $serialized <p>
+     * The string representation of the object.
+     * </p>
+     * @return void
+     * @since 5.1.0
+     */
+    public function unserialize($serialized)
+    {
+        list(
+            $this->idUser,
+            $this->firstName,
+            $this->lastName,
+            $this->password,
+            $this->email,
+            $this->emailConfirmed,
+            $this->mobile,
+            $this->isPro,
+            $this->userName,
+            $this->idMainAddress,
+            $this->pidType
+            ) = unserialize($serialized,['allowed_classes'=>false]);
+    }
 }

@@ -104,7 +104,25 @@ class __TwigTemplate_9c12571f17dba52a60de2c4811ba35d2036ee0fa48d155e8a7c04b5c99f
 
         // line 10
         echo "    <h1>Users index</h1>
-    <div class=\"table-responsive\">
+    ";
+        // line 11
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 11));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 12
+            echo "        <div class=\"alert alert-success\">
+            ";
+            // line 13
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+        </div>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 16
+        echo "    <div class=\"table-responsive\">
         <table class=\"table table-striped\">
             <thead>
                 <tr scope=\"col\">
@@ -122,57 +140,57 @@ class __TwigTemplate_9c12571f17dba52a60de2c4811ba35d2036ee0fa48d155e8a7c04b5c99f
             </thead>
             <tbody>
             ";
-        // line 28
+        // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 28, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 33, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 29
+            // line 34
             echo "                <tr>
                     <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "idUser", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 31), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 32
-            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "emailConfirmed", [], "any", false, false, false, 32)) ? ("Yes") : ("No"));
-            echo "</td>
-                    <td>";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mobile", [], "any", false, false, false, 33), "html", null, true);
-            echo "</td>
-                    <td>";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 34), "html", null, true);
-            echo "</td>
-                    <td>";
             // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 35), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "idUser", [], "any", false, false, false, 35), "html", null, true);
             echo "</td>
                     <td>";
             // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "userName", [], "any", false, false, false, 36), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 36), "html", null, true);
             echo "</td>
                     <td>";
             // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "password", [], "any", false, false, false, 37), "html", null, true);
+            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "emailConfirmed", [], "any", false, false, false, 37)) ? ("Yes") : ("No"));
             echo "</td>
                     <td>";
             // line 38
-            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "isPro", [], "any", false, false, false, 38)) ? ("Yes") : ("No"));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "mobile", [], "any", false, false, false, 38), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "firstName", [], "any", false, false, false, 39), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "lastName", [], "any", false, false, false, 40), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "userName", [], "any", false, false, false, 41), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "password", [], "any", false, false, false, 42), "html", null, true);
+            echo "</td>
+                    <td>";
+            // line 43
+            echo ((twig_get_attribute($this->env, $this->source, $context["user"], "isPro", [], "any", false, false, false, 43)) ? ("Yes") : ("No"));
             echo "</td>
                     <td>
                         <a type=\"button\" class=\"btn btn-success\" href=\"";
-            // line 40
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_show", ["idUser" => twig_get_attribute($this->env, $this->source, $context["user"], "idUser", [], "any", false, false, false, 40)]), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_show", ["idUser" => twig_get_attribute($this->env, $this->source, $context["user"], "idUser", [], "any", false, false, false, 45)]), "html", null, true);
             echo "\">show</a>
                         <a type=\"button\" class=\"btn btn-primary\" href=\"";
-            // line 41
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_edit", ["idUser" => twig_get_attribute($this->env, $this->source, $context["user"], "idUser", [], "any", false, false, false, 41)]), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_edit", ["idUser" => twig_get_attribute($this->env, $this->source, $context["user"], "idUser", [], "any", false, false, false, 46)]), "html", null, true);
             echo "\">edit</a>
                     </td>
                 </tr>
@@ -180,7 +198,7 @@ class __TwigTemplate_9c12571f17dba52a60de2c4811ba35d2036ee0fa48d155e8a7c04b5c99f
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 45
+            // line 50
             echo "                <tr>
                     <td colspan=\"10\">no records found</td>
                 </tr>
@@ -189,12 +207,12 @@ class __TwigTemplate_9c12571f17dba52a60de2c4811ba35d2036ee0fa48d155e8a7c04b5c99f
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
+        // line 54
         echo "            </tbody>
         </table>
     </div>
     <a type=\"button\" class=\"btn btn-primary btn-lg\" href=\"";
-        // line 52
+        // line 57
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_new");
         echo "\">Create new</a>
 ";
@@ -218,7 +236,7 @@ class __TwigTemplate_9c12571f17dba52a60de2c4811ba35d2036ee0fa48d155e8a7c04b5c99f
 
     public function getDebugInfo()
     {
-        return array (  198 => 52,  193 => 49,  184 => 45,  175 => 41,  171 => 40,  166 => 38,  162 => 37,  158 => 36,  154 => 35,  150 => 34,  146 => 33,  142 => 32,  138 => 31,  134 => 30,  131 => 29,  126 => 28,  106 => 10,  97 => 9,  85 => 5,  76 => 4,  58 => 3,  36 => 1,);
+        return array (  216 => 57,  211 => 54,  202 => 50,  193 => 46,  189 => 45,  184 => 43,  180 => 42,  176 => 41,  172 => 40,  168 => 39,  164 => 38,  160 => 37,  156 => 36,  152 => 35,  149 => 34,  144 => 33,  125 => 16,  116 => 13,  113 => 12,  109 => 11,  106 => 10,  97 => 9,  85 => 5,  76 => 4,  58 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -233,6 +251,11 @@ class __TwigTemplate_9c12571f17dba52a60de2c4811ba35d2036ee0fa48d155e8a7c04b5c99f
 
 {% block body %}
     <h1>Users index</h1>
+    {% for message in app.flashes('success') %}
+        <div class=\"alert alert-success\">
+            {{ message }}
+        </div>
+    {% endfor %}
     <div class=\"table-responsive\">
         <table class=\"table table-striped\">
             <thead>
