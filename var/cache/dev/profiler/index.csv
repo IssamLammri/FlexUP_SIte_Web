@@ -500,3 +500,8 @@ d00617,::1,GET,http://localhost:8000/users/?idUser=1,1558607923,,200
 2fa472,::1,POST,http://localhost:8000/users/2/edit,1558607937,,302
 918feb,::1,GET,http://localhost:8000/users/?idUser=2,1558607937,,200
 3dbca0,::1,GET,http://localhost:8000/Issam,1558607982,,200
+35edae,::1,GET,http://localhost:8000/Issam,1558608435,,200
+738e96,::1,GET,http://localhost:8000/inscription,1558608440,,200
+5f67c2,::1,GET,http://localhost:8000/users/new,1558608447,,200
+9e1f23,::1,GET,http://localhost:8000/Issam,1558608507,,200
+d01b91,::1,GET,http://localhost:8000/users/new,1558608509,,200

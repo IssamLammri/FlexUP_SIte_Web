@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerXb3h1DO;
+namespace ContainerEAEAvNI;
 
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
@@ -67,7 +67,6 @@ class srcApp_KernelDevDebugContainer extends Container
             'App\\Controller\\Groupes' => 'getGroupesService.php',
             'App\\Controller\\GroupsController' => 'getGroupsControllerService.php',
             'App\\Controller\\HomeController' => 'getHomeControllerService.php',
-            'App\\Controller\\Inscription' => 'getInscriptionService.php',
             'App\\Controller\\IssamController\\IssamController' => 'getIssamControllerService.php',
             'App\\Controller\\MyGroups' => 'getMyGroupsService.php',
             'App\\Controller\\Panier' => 'getPanierService.php',
@@ -776,7 +775,7 @@ class srcApp_KernelDevDebugContainer extends Container
         $a->addPath(($this->targetDirs[3].'/templates'));
         $a->addPath(($this->targetDirs[3].'\\vendor\\symfony\\twig-bridge/Resources/views/Form'));
 
-        $this->services['twig'] = $instance = new \Twig\Environment($a, ['default_path' => ($this->targetDirs[3].'/templates'), 'debug' => true, 'strict_variables' => true, 'exception_controller' => 'twig.controller.exception::showAction', 'form_themes' => $this->parameters['twig.form.resources'], 'autoescape' => 'name', 'cache' => ($this->targetDirs[0].'/twig'), 'charset' => 'UTF-8', 'paths' => [], 'date' => ['format' => 'F j, Y H:i', 'interval_format' => '%d days', 'timezone' => NULL], 'number_format' => ['decimals' => 0, 'decimal_point' => '.', 'thousands_separator' => ',']]);
+        $this->services['twig'] = $instance = new \Twig\Environment($a, ['default_path' => ($this->targetDirs[3].'/templates'), 'debug' => true, 'strict_variables' => true, 'form_themes' => $this->parameters['twig.form.resources'], 'exception_controller' => 'twig.controller.exception::showAction', 'autoescape' => 'name', 'cache' => ($this->targetDirs[0].'/twig'), 'charset' => 'UTF-8', 'paths' => [], 'date' => ['format' => 'F j, Y H:i', 'interval_format' => '%d days', 'timezone' => NULL], 'number_format' => ['decimals' => 0, 'decimal_point' => '.', 'thousands_separator' => ',']]);
 
         $b = ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true)));
         $c = ($this->privates['debug.file_link_formatter'] ?? $this->getDebug_FileLinkFormatterService());
@@ -1721,6 +1720,7 @@ class srcApp_KernelDevDebugContainer extends Container
             'twig.exception_listener.controller' => 'twig.controller.exception::showAction',
             'twig.form.resources' => [
                 0 => 'form_div_layout.html.twig',
+                1 => 'bootstrap_4_layout.html.twig',
             ],
             'web_profiler.debug_toolbar.intercept_redirects' => false,
             'web_profiler.debug_toolbar.mode' => 2,

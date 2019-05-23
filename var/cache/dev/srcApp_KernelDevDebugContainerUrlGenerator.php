@@ -57,7 +57,6 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'groups_edit' => [['idGroup'], ['_controller' => 'App\\Controller\\GroupsController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'idGroup', true], ['text', '/groups']], [], []],
         'groups_delete' => [['idGroup'], ['_controller' => 'App\\Controller\\GroupsController::delete'], [], [['variable', '/', '[^/]++', 'idGroup', true], ['text', '/groups']], [], []],
         'home' => [[], ['_controller' => 'App\\Controller\\HomeController::index'], [], [['text', '/']], [], []],
-        'Inscription' => [[], ['_controller' => 'App\\Controller\\Inscription::index'], [], [['text', '/inscription']], [], []],
         'issam' => [[], ['_controller' => 'App\\Controller\\IssamController\\IssamController::index'], [], [['text', '/Issam']], [], []],
         'mygroups' => [[], ['_controller' => 'App\\Controller\\MyGroups::index'], [], [['text', '/mygroups']], [], []],
         'Panier' => [[], ['_controller' => 'App\\Controller\\Panier::index'], [], [['text', '/panier']], [], []],
