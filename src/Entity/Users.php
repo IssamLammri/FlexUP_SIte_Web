@@ -306,7 +306,7 @@ class Users implements UserInterface,\Serializable
      */
     public function unserialize($serialized)
     {
-        list(
+        list (
             $this->idUser,
             $this->firstName,
             $this->lastName,
@@ -318,6 +318,6 @@ class Users implements UserInterface,\Serializable
             $this->userName,
             $this->idMainAddress,
             $this->pidType
-            ) = unserialize($serialized,['allowed_classes'=>false]);
+            ) = unserialize($serialized, ['allowed_classes' => false]);
     }
 }
