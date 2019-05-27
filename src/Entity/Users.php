@@ -3,13 +3,21 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\Validator\Constraints\UserPassword;
+use Symfony\Component\Validator\Constraints as Assert ;
 
 /**
  * Users
  *
  * @ORM\Table(name="users", indexes={@ORM\Index(name="PID_Type", columns={"PID_Type"}), @ORM\Index(name="ID_Main_Address", columns={"ID_Main_Address"})})
  * @ORM\Entity
+ * @UniqueEntity(
+ *     fields={"email"},
+ *     message= "l'email que vous avez indiqué est dija utilisé !"
+ *
+ * )
  */
 class Users implements UserInterface,\Serializable
 {
@@ -26,6 +34,7 @@ class Users implements UserInterface,\Serializable
      * @var string
      *
      * @ORM\Column(name="Email", type="string", length=100, nullable=false)
+     * @Assert\Email()
      */
     private $email;
 
@@ -68,8 +77,15 @@ class Users implements UserInterface,\Serializable
      * @var string
      *
      * @ORM\Column(name="Password", type="string", length=255, nullable=false)
+     * @Assert\Length(min="8",minMessage ="votre mot de passe doit fair miniume 8 carcataire" )
+     * @Assert\EqualTo(propertyPath="confirm_password",message ="vous n'avez pas tapé le meme mot de passe")
      */
     private $password;
+
+    /**
+     * @Assert\EqualTo(propertyPath="password",message ="vous n'avez pas tapé le meme mot de passe")
+     */
+    public $confirm_password;
 
     /**
      * @var bool|null

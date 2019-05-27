@@ -3151,9 +3151,9 @@
     <service id="security.encoder_factory.generic" class="Symfony\Component\Security\Core\Encoder\EncoderFactory" public="false">
       <argument type="collection">
         <argument key="App\Entity\Users" type="collection">
-          <argument key="class">Symfony\Component\Security\Core\Encoder\PlaintextPasswordEncoder</argument>
+          <argument key="class">Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder</argument>
           <argument key="arguments" type="collection">
-            <argument>false</argument>
+            <argument>12</argument>
           </argument>
         </argument>
       </argument>
@@ -4866,10 +4866,23 @@
         <argument key="service" type="service" id=".errored..service_locator..7DLMsk.App\Entity\Service"/>
       </argument>
     </service>
+    <service id=".service_locator._gPEhjd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="encoder" type="service" id="security.user_password_encoder.generic"/>
+      </argument>
+    </service>
     <service id=".service_locator.CLREBB2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="user" type="service" id=".errored..service_locator.CLREBB2.App\Entity\Users"/>
+      </argument>
+    </service>
+    <service id=".service_locator.2yc.idR" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="encoder" type="service" id="security.user_password_encoder.generic"/>
+        <argument key="user" type="service" id=".errored..service_locator.2yc.idR.App\Entity\Users"/>
       </argument>
     </service>
     <service id=".service_locator.dnczLyX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
@@ -4878,7 +4891,7 @@
         <argument key="zone" type="service" id=".errored..service_locator.dnczLyX.App\Entity\Zone"/>
       </argument>
     </service>
-    <service id=".service_locator.sYOlVT5" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.yRJDZop" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AddressesController::delete" type="service" id=".service_locator.alodU2Q"/>
@@ -4898,7 +4911,8 @@
         <argument key="App\Controller\ServiceController::edit" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\ServiceController::show" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\UsersController::delete" type="service" id=".service_locator.CLREBB2"/>
-        <argument key="App\Controller\UsersController::edit" type="service" id=".service_locator.CLREBB2"/>
+        <argument key="App\Controller\UsersController::edit" type="service" id=".service_locator.2yc.idR"/>
+        <argument key="App\Controller\UsersController::new" type="service" id=".service_locator._gPEhjd"/>
         <argument key="App\Controller\UsersController::show" type="service" id=".service_locator.CLREBB2"/>
         <argument key="App\Controller\ZoneController::delete" type="service" id=".service_locator.dnczLyX"/>
         <argument key="App\Controller\ZoneController::edit" type="service" id=".service_locator.dnczLyX"/>
@@ -4920,7 +4934,8 @@
         <argument key="App\Controller\ServiceController:edit" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\ServiceController:show" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\UsersController:delete" type="service" id=".service_locator.CLREBB2"/>
-        <argument key="App\Controller\UsersController:edit" type="service" id=".service_locator.CLREBB2"/>
+        <argument key="App\Controller\UsersController:edit" type="service" id=".service_locator.2yc.idR"/>
+        <argument key="App\Controller\UsersController:new" type="service" id=".service_locator._gPEhjd"/>
         <argument key="App\Controller\UsersController:show" type="service" id=".service_locator.CLREBB2"/>
         <argument key="App\Controller\ZoneController:delete" type="service" id=".service_locator.dnczLyX"/>
         <argument key="App\Controller\ZoneController:edit" type="service" id=".service_locator.dnczLyX"/>
@@ -5375,7 +5390,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.sYOlVT5"/>
+      <argument type="service" id=".service_locator.yRJDZop"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -5385,6 +5400,7 @@
     <service id=".errored..service_locator.8z1HQm8.App\Entity\Groups" class="App\Entity\Groups"/>
     <service id=".errored..service_locator..7DLMsk.App\Entity\Service" class="App\Entity\Service"/>
     <service id=".errored..service_locator.CLREBB2.App\Entity\Users" class="App\Entity\Users"/>
+    <service id=".errored..service_locator.2yc.idR.App\Entity\Users" class="App\Entity\Users"/>
     <service id=".errored..service_locator.dnczLyX.App\Entity\Zone" class="App\Entity\Zone"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.KwgMclN"/>
@@ -5725,7 +5741,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface" alias="webpack_encore.entrypoint_lookup_collection" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.sYOlVT5"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.yRJDZop"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".service_locator.tSKDlY7" alias=".1_ServiceLocator~JO0STEY" public="false"/>
