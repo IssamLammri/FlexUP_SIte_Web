@@ -25,7 +25,6 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/category' => [[['_route' => 'category_index', '_controller' => 'App\\Controller\\CategoryController::index'], null, ['GET' => 0], null, true, false, null]],
             '/category/new' => [[['_route' => 'category_new', '_controller' => 'App\\Controller\\CategoryController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
             '/createaccount' => [[['_route' => 'creataccount', '_controller' => 'App\\Controller\\Client_Create_Account::index'], null, null, null, false, false, null]],
-            '/commande' => [[['_route' => 'Commande', '_controller' => 'App\\Controller\\Commande::index'], null, null, null, false, false, null]],
             '/enquiry' => [[['_route' => 'enquiry_index', '_controller' => 'App\\Controller\\EnquiryController::index'], null, ['GET' => 0], null, true, false, null]],
             '/enquiry/new' => [[['_route' => 'enquiry_new', '_controller' => 'App\\Controller\\EnquiryController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
             '/groupes' => [[['_route' => 'Groupes', '_controller' => 'App\\Controller\\Groupes::index'], null, null, null, false, false, null]],
@@ -35,6 +34,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/Issam' => [[['_route' => 'issam', '_controller' => 'App\\Controller\\IssamController\\IssamController::index'], null, null, null, false, false, null]],
             '/mygroups' => [[['_route' => 'mygroups', '_controller' => 'App\\Controller\\MyGroups::index'], null, null, null, false, false, null]],
             '/panier' => [[['_route' => 'Panier', '_controller' => 'App\\Controller\\Panier::index'], null, null, null, false, false, null]],
+            '/profil' => [[['_route' => 'Profil', '_controller' => 'App\\Controller\\Profil::index'], null, null, null, false, false, null]],
             '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
             '/service' => [[['_route' => 'service_index', '_controller' => 'App\\Controller\\ServiceController::index'], null, ['GET' => 0], null, true, false, null]],
             '/service/new' => [[['_route' => 'service_new', '_controller' => 'App\\Controller\\ServiceController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -42,6 +42,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/users/new' => [[['_route' => 'users_new', '_controller' => 'App\\Controller\\UsersController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
             '/zone' => [[['_route' => 'zone_index', '_controller' => 'App\\Controller\\ZoneController::index'], null, ['GET' => 0], null, true, false, null]],
             '/zone/new' => [[['_route' => 'zone_new', '_controller' => 'App\\Controller\\ZoneController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            '/logout' => [[['_route' => 'logout'], null, null, null, false, false, null]],
         ];
         $this->regexpList = [
             0 => '{^(?'

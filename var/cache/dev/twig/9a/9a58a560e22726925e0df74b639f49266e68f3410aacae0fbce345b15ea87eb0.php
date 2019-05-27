@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* Pages/Commande.html.twig */
+/* Pages/Profil.html.twig */
 class __TwigTemplate_7f33a29fb9ec97299b58c093face8ed3bd6b7522813f178967962f421320e552 extends \Twig\Template
 {
     private $source;
@@ -38,12 +38,12 @@ class __TwigTemplate_7f33a29fb9ec97299b58c093face8ed3bd6b7522813f178967962f42132
     protected function doDisplay(array $context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/Commande.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/Profil.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/Commande.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "Pages/Profil.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "Pages/Commande.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "Pages/Profil.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -99,7 +99,7 @@ class __TwigTemplate_7f33a29fb9ec97299b58c093face8ed3bd6b7522813f178967962f42132
 
     public function getTemplateName()
     {
-        return "Pages/Commande.html.twig";
+        return "Pages/Profil.html.twig";
     }
 
     public function isTraitable()
@@ -126,6 +126,6 @@ class __TwigTemplate_7f33a29fb9ec97299b58c093face8ed3bd6b7522813f178967962f42132
     </div>
     
 
-{% endblock %}", "Pages/Commande.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\Pages\\Commande.html.twig");
+{% endblock %}", "Pages/Profil.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\Pages\\Profil.html.twig");
     }
 }

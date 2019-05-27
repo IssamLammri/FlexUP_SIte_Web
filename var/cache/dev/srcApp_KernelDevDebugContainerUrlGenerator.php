@@ -43,7 +43,6 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'category_edit' => [['idCategory'], ['_controller' => 'App\\Controller\\CategoryController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'idCategory', true], ['text', '/category']], [], []],
         'category_delete' => [['idCategory'], ['_controller' => 'App\\Controller\\CategoryController::delete'], [], [['variable', '/', '[^/]++', 'idCategory', true], ['text', '/category']], [], []],
         'creataccount' => [[], ['_controller' => 'App\\Controller\\Client_Create_Account::index'], [], [['text', '/createaccount']], [], []],
-        'Commande' => [[], ['_controller' => 'App\\Controller\\Commande::index'], [], [['text', '/commande']], [], []],
         'enquiry_index' => [[], ['_controller' => 'App\\Controller\\EnquiryController::index'], [], [['text', '/enquiry/']], [], []],
         'enquiry_new' => [[], ['_controller' => 'App\\Controller\\EnquiryController::new'], [], [['text', '/enquiry/new']], [], []],
         'enquiry_show' => [['idOrder'], ['_controller' => 'App\\Controller\\EnquiryController::show'], [], [['variable', '/', '[^/]++', 'idOrder', true], ['text', '/enquiry']], [], []],
@@ -59,6 +58,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'issam' => [[], ['_controller' => 'App\\Controller\\IssamController\\IssamController::index'], [], [['text', '/Issam']], [], []],
         'mygroups' => [[], ['_controller' => 'App\\Controller\\MyGroups::index'], [], [['text', '/mygroups']], [], []],
         'Panier' => [[], ['_controller' => 'App\\Controller\\Panier::index'], [], [['text', '/panier']], [], []],
+        'Profil' => [[], ['_controller' => 'App\\Controller\\Profil::index'], [], [['text', '/profil']], [], []],
         'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
         'service_index' => [[], ['_controller' => 'App\\Controller\\ServiceController::index'], [], [['text', '/service/']], [], []],
         'service_new' => [[], ['_controller' => 'App\\Controller\\ServiceController::new'], [], [['text', '/service/new']], [], []],
@@ -75,6 +75,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         'zone_show' => [['idZone'], ['_controller' => 'App\\Controller\\ZoneController::show'], [], [['variable', '/', '[^/]++', 'idZone', true], ['text', '/zone']], [], []],
         'zone_edit' => [['idZone'], ['_controller' => 'App\\Controller\\ZoneController::edit'], [], [['text', '/edit'], ['variable', '/', '[^/]++', 'idZone', true], ['text', '/zone']], [], []],
         'zone_delete' => [['idZone'], ['_controller' => 'App\\Controller\\ZoneController::delete'], [], [['variable', '/', '[^/]++', 'idZone', true], ['text', '/zone']], [], []],
+        'logout' => [[], [], [], [['text', '/logout']], [], []],
     ];
         }
     }
