@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerATb19mr\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'ATb19mr',
-    'container.build_id' => 'e3ef1bf9',
-    'container.build_time' => 1558958141,
+    'container.build_id' => 'f88d143f',
+    'container.build_time' => 1559044069,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerATb19mr');
