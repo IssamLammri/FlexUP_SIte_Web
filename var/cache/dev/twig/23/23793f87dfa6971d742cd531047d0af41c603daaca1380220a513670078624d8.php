@@ -202,6 +202,6 @@ class __TwigTemplate_c8abc403094bc76499eb77acde2a32f9de616797c2cf342f0753128daf3
         })|raw }}
     </div>
 {% endif %}
-", "@Twig/Exception/trace.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\trace.html.twig");
+", "@Twig/Exception/trace.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\trace.html.twig");
     }
 }

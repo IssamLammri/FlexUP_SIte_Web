@@ -22,23 +22,30 @@ class Offers
     private $idOffers;
 
     /**
-     * @var int
+     * @var \Groups
      *
-     * @ORM\Column(name="ID_Group", type="integer", nullable=false)
+     * @ORM\ManyToOne(targetEntity="Groups")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ID_Group", referencedColumnName="ID_Group")
+     * })
      */
     private $idGroup;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="ID_Service", type="integer", nullable=false)
+     * @var \Service
+     *@ORM\ManyToOne(targetEntity="Service")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ID_Service",referencedColumnName="ID_Service")
+     * })
      */
     private $idService;
 
     /**
-     * @var int
-     *
-     * @ORM\Column(name="ID_Zones", type="integer", nullable=false)
+     * @var \Zone
+     *@ORM\ManyToOne(targetEntity="Zone")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="ID_Zone",referencedColumnName="ID_Zone")
+     * })
      */
     private $idZones;
 
@@ -96,7 +103,7 @@ class Offers
         return $this->idOffers;
     }
 
-    public function getIdGroup(): ?int
+    public function getIdGroup(): ?Groups
     {
         return $this->idGroup;
     }
@@ -108,7 +115,7 @@ class Offers
         return $this;
     }
 
-    public function getIdService(): ?int
+    public function getIdService(): ?Service
     {
         return $this->idService;
     }
@@ -120,7 +127,7 @@ class Offers
         return $this;
     }
 
-    public function getIdZones(): ?int
+    public function getIdZones(): ?Zone
     {
         return $this->idZones;
     }
