@@ -57,44 +57,44 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
     ";
         // line 10
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 11
+        // line 12
         echo "</head>
 <body>
 <nav class=\"navbar navbar-expand-lg navbar-dark color: bg-primary\">
     <a class=\"navbar-brand\" href=\"";
-        // line 14
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">FlexUP</a>
     <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
         <span class=\"navbar-toggler-icon\"></span>
     </button>
     ";
-        // line 18
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", [], "any", false, false, false, 18)) {
-            // line 19
+        // line 19
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19)) {
+            // line 20
             echo "        <a class=\"btn btn-outline-light\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Groupes");
             echo "\"> Mes Groupes   </a>
     ";
         }
-        // line 21
+        // line 22
         echo "
 
     <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
         <ul class=\"navbar-nav mr-auto\">
             ";
-        // line 25
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", [], "any", false, false, false, 25)) {
-            // line 26
+        // line 26
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 26, $this->source); })()), "user", [], "any", false, false, false, 26)) {
+            // line 27
             echo "                <li class=\"nav-item\">
                     <a class=\"btn btn-outline-light\" href=\"";
-            // line 27
+            // line 28
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profil");
             echo "\"> Mon Profil </a>
                 </li>
             ";
         }
-        // line 30
+        // line 31
         echo "
 
             <li class=\"nav-item dropdown\">
@@ -104,28 +104,28 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
 
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
                     ";
-        // line 38
+        // line 39
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 38, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new RuntimeError('Variable "categories" does not exist.', 39, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["cat"]) {
-            // line 39
+            // line 40
             echo "                        ";
-            if ((twig_get_attribute($this->env, $this->source, $context["cat"], "level", [], "any", false, false, false, 39) < 4)) {
-                // line 40
+            if ((twig_get_attribute($this->env, $this->source, $context["cat"], "level", [], "any", false, false, false, 40) < 4)) {
+                // line 41
                 echo "                             <a class=\"dropdown-item\" href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profil");
                 echo "\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nameCategory", [], "any", false, false, false, 40), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nameCategory", [], "any", false, false, false, 41), "html", null, true);
                 echo " </a>
                         ";
             }
-            // line 42
+            // line 43
             echo "                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cat'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 44
         echo "                    <div class=\"dropdown-divider\"></div>
                     <a class=\"dropdown-item\" href=\"#\">Ajouter un service</a>
                 </div>
@@ -142,46 +142,44 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
     </div>
     <li class=\"nav-item\">
         ";
-        // line 58
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 58, $this->source); })()), "user", [], "any", false, false, false, 58)) {
-            // line 59
+        // line 59
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 59, $this->source); })()), "user", [], "any", false, false, false, 59)) {
+            // line 60
             echo "            <a class=\"btn btn-outline-light\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Panier");
             echo "\"> Mon Panier </a>
             <a class=\"btn btn-outline-light\" href=\"";
-            // line 60
+            // line 61
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\"> Se déconnecter </a>
             <a class=\"btn btn-outline-light\" href=\"";
-            // line 61
+            // line 62
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("issam");
             echo "\"> Admin </a>
         ";
         } else {
-            // line 63
+            // line 64
             echo "            <a class=\"btn btn-outline-light\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_new");
             echo "\"> Inscription </a>
             <a class=\"btn btn-outline-light\" href=\"";
-            // line 64
+            // line 65
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo "\"> Connexion </a>
         ";
         }
-        // line 66
+        // line 67
         echo "
     </li>
 </nav>
 
 ";
-        // line 70
-        $this->displayBlock('body', $context, $blocks);
         // line 71
-        $this->displayBlock('javascripts', $context, $blocks);
+        $this->displayBlock('body', $context, $blocks);
         // line 72
-        echo "<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
-<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 78
+        echo "
 
 
 </body>
@@ -222,6 +220,8 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
+        // line 11
+        echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -230,7 +230,7 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
 
     }
 
-    // line 70
+    // line 71
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -247,7 +247,7 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
 
     }
 
-    // line 71
+    // line 72
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -256,6 +256,12 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
+        // line 73
+        echo "    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -276,7 +282,7 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
 
     public function getDebugInfo()
     {
-        return array (  251 => 71,  234 => 70,  217 => 10,  199 => 5,  182 => 72,  180 => 71,  178 => 70,  172 => 66,  167 => 64,  162 => 63,  157 => 61,  153 => 60,  148 => 59,  146 => 58,  129 => 43,  123 => 42,  115 => 40,  112 => 39,  108 => 38,  98 => 30,  92 => 27,  89 => 26,  87 => 25,  81 => 21,  75 => 19,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
+        return array (  260 => 73,  251 => 72,  234 => 71,  224 => 11,  215 => 10,  197 => 5,  182 => 78,  180 => 72,  178 => 71,  172 => 67,  167 => 65,  162 => 64,  157 => 62,  153 => 61,  148 => 60,  146 => 59,  129 => 44,  123 => 43,  115 => 41,  112 => 40,  108 => 39,  98 => 31,  92 => 28,  89 => 27,  87 => 26,  81 => 22,  75 => 20,  73 => 19,  66 => 15,  61 => 12,  59 => 10,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -290,7 +296,8 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
 
     <link rel=\"stylesheet\"   href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
 
-    {% block stylesheets %}{% endblock %}
+    {% block stylesheets %}
+    {% endblock %}
 </head>
 <body>
 <nav class=\"navbar navbar-expand-lg navbar-dark color: bg-primary\">
@@ -351,10 +358,13 @@ class __TwigTemplate_33c20f5365c107744d64c04e62e92ca7b67ecfc67030979ea53f5bd736c
 </nav>
 
 {% block body %}{% endblock %}
-{% block javascripts %}{% endblock %}
-<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
-<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
-<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+{% block javascripts %}
+    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
+
+{% endblock %}
+
 
 
 </body>
