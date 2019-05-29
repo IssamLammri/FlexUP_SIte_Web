@@ -113,55 +113,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("enquiry_index");
         echo "\"> Enquiry </a>
 
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 17
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("basket_index");
-        echo "\"> Basket </a>
 
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 19
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("currency_index");
-        echo "\"> Cuurency </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("group_zone_index");
-        echo "\"> Groupe _ Zone  </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 23
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offered_prices_index");
-        echo "\"> Offers_Price </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 25
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("offers_index");
-        echo "\"> Offers </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 27
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("orders_refused_index");
-        echo "\"> Order refused </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 29
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("participants_index");
-        echo "\"> Participant </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 31
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("participants_groups_index");
-        echo "\"> Participant groups </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 33
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("type_identify_document_index");
-        echo "\"> Type identify Document </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 35
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_identify_index");
-        echo "\"> Users identify  </a>
 
     </div>
 ";
@@ -185,7 +137,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
     public function getDebugInfo()
     {
-        return array (  163 => 35,  158 => 33,  153 => 31,  148 => 29,  143 => 27,  138 => 25,  133 => 23,  128 => 21,  123 => 19,  118 => 17,  113 => 15,  109 => 14,  105 => 13,  101 => 12,  97 => 11,  93 => 10,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  113 => 15,  109 => 14,  105 => 13,  101 => 12,  97 => 11,  93 => 10,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -206,25 +158,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         <a class=\"btn btn-outline-dark\" href=\"{{ path('zone_index') }}\"> Zone de travaille </a>
         <a class=\"btn btn-outline-dark\" href=\"{{ path('enquiry_index') }}\"> Enquiry </a>
 
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('basket_index') }}\"> Basket </a>
 
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('currency_index') }}\"> Cuurency </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('group_zone_index') }}\"> Groupe _ Zone  </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('offered_prices_index') }}\"> Offers_Price </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('offers_index') }}\"> Offers </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('orders_refused_index') }}\"> Order refused </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('participants_index') }}\"> Participant </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('participants_groups_index') }}\"> Participant groups </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('type_identify_document_index') }}\"> Type identify Document </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('user_identify_index') }}\"> Users identify  </a>
 
     </div>
 {% endblock %}", "Issam/issam.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\Issam\\issam.html.twig");
