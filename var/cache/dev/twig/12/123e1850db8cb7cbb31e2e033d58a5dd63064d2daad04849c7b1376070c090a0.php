@@ -208,6 +208,6 @@ class __TwigTemplate_94aaa6c4ee307465d3da5f17ffc5d4a8400bb4aa78c7600cee832158927
 
     <a href=\"{{ path('category_new') }}\">Create new</a>
 {% endblock %}
-", "category/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\category\\index.html.twig");
+", "category/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\category\\index.html.twig");
     }
 }

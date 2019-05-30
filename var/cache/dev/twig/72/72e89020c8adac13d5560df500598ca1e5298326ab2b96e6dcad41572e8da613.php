@@ -82,6 +82,6 @@ class __TwigTemplate_a04c4a837e9f853e9fcc3c94f5263fb7e4012f2b8a675e8b0c5e0fa8c6e
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "groups/_form.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\groups\\_form.html.twig");
+", "groups/_form.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\groups\\_form.html.twig");
     }
 }

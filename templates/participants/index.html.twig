@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Participants index{% endblock %}
+
+{% block body %}
+    <h1>Participants index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdParticipant</th>
+                <th>InvestmentDate</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>DateLeaves</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for participant in participants %}
+            <tr>
+                <td>{{ participant.idParticipant }}</td>
+                <td>{{ participant.investmentDate ? participant.investmentDate|date('Y-m-d') : '' }}</td>
+                <td>{{ participant.amount }}</td>
+                <td>{{ participant.type }}</td>
+                <td>{{ participant.dateLeaves ? participant.dateLeaves|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('participants_show', {'idParticipant': participant.idParticipant}) }}">show</a>
+                    <a href="{{ path('participants_edit', {'idParticipant': participant.idParticipant}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('participants_new') }}">Create new</a>
+{% endblock %}

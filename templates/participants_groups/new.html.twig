@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New ParticipantsGroups{% endblock %}
+
+{% block body %}
+    <h1>Create new ParticipantsGroups</h1>
+
+    {{ include('participants_groups/_form.html.twig') }}
+
+    <a href="{{ path('participants_groups_index') }}">back to list</a>
+{% endblock %}

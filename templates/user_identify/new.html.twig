@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New UserIdentify{% endblock %}
+
+{% block body %}
+    <h1>Create new UserIdentify</h1>
+
+    {{ include('user_identify/_form.html.twig') }}
+
+    <a href="{{ path('user_identify_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserIdentify index{% endblock %}
+
+{% block body %}
+    <h1>UserIdentify index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>PidNumber</th>
+                <th>DateOfIssue</th>
+                <th>DateOfExpiration</th>
+                <th>EmissionEntity</th>
+                <th>Satuts</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user_identify in user_identifies %}
+            <tr>
+                <td>{{ user_identify.id }}</td>
+                <td>{{ user_identify.pidNumber }}</td>
+                <td>{{ user_identify.dateOfIssue ? user_identify.dateOfIssue|date('Y-m-d') : '' }}</td>
+                <td>{{ user_identify.dateOfExpiration ? user_identify.dateOfExpiration|date('Y-m-d') : '' }}</td>
+                <td>{{ user_identify.emissionEntity }}</td>
+                <td>{{ user_identify.satuts }}</td>
+                <td>
+                    <a href="{{ path('user_identify_show', {'id': user_identify.id}) }}">show</a>
+                    <a href="{{ path('user_identify_edit', {'id': user_identify.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_identify_new') }}">Create new</a>
+{% endblock %}

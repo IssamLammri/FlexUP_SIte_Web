@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OrdersRefused{% endblock %}
+
+{% block body %}
+    <h1>OrdersRefused</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdOrderR</th>
+                <td>{{ orders_refused.idOrderR }}</td>
+            </tr>
+            <tr>
+                <th>DateRefuse</th>
+                <td>{{ orders_refused.dateRefuse ? orders_refused.dateRefuse|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Reason</th>
+                <td>{{ orders_refused.reason }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('orders_refused_index') }}">back to list</a>
+
+    <a href="{{ path('orders_refused_edit', {'idOrderR': orders_refused.idOrderR}) }}">edit</a>
+
+    {{ include('orders_refused/_delete_form.html.twig') }}
+{% endblock %}

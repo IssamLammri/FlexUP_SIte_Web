@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New GroupZone{% endblock %}
+
+{% block body %}
+    <h1>Create new GroupZone</h1>
+
+    {{ include('group_zone/_form.html.twig') }}
+
+    <a href="{{ path('group_zone_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GroupZone index{% endblock %}
+
+{% block body %}
+    <h1>GroupZone index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdGroupZone</th>
+                <th>Date</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for group_zone in group_zones %}
+            <tr>
+                <td>{{ group_zone.idGroupZone }}</td>
+                <td>{{ group_zone.date ? group_zone.date|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('group_zone_show', {'idGroupZone': group_zone.idGroupZone}) }}">show</a>
+                    <a href="{{ path('group_zone_edit', {'idGroupZone': group_zone.idGroupZone}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('group_zone_new') }}">Create new</a>
+{% endblock %}

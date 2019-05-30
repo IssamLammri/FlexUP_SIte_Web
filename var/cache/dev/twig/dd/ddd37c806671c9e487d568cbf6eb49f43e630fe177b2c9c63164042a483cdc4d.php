@@ -179,6 +179,6 @@ class __TwigTemplate_b4ec1fe67758367413a6430e5adc2cce8b7f542acf3dbb7f1861f3cbbff
 
     {{ include('category/_delete_form.html.twig') }}
 {% endblock %}
-", "category/show.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\category\\show.html.twig");
+", "category/show.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\category\\show.html.twig");
     }
 }

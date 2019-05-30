@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ParticipantsGroups{% endblock %}
+
+{% block body %}
+    <h1>ParticipantsGroups</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdParticipantGroup</th>
+                <td>{{ participants_group.idParticipantGroup }}</td>
+            </tr>
+            <tr>
+                <th>InvestmentDate</th>
+                <td>{{ participants_group.investmentDate ? participants_group.investmentDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Amount</th>
+                <td>{{ participants_group.amount }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ participants_group.type }}</td>
+            </tr>
+            <tr>
+                <th>DateLeaves</th>
+                <td>{{ participants_group.dateLeaves ? participants_group.dateLeaves|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('participants_groups_index') }}">back to list</a>
+
+    <a href="{{ path('participants_groups_edit', {'idParticipantG': participants_group.idParticipantG}) }}">edit</a>
+
+    {{ include('participants_groups/_delete_form.html.twig') }}
+{% endblock %}

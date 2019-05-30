@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ParticipantsGroups index{% endblock %}
+
+{% block body %}
+    <h1>ParticipantsGroups index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdParticipantGroup</th>
+                <th>InvestmentDate</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>DateLeaves</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for participants_group in participants_groups %}
+            <tr>
+                <td>{{ participants_group.idParticipantGroup }}</td>
+                <td>{{ participants_group.investmentDate ? participants_group.investmentDate|date('Y-m-d') : '' }}</td>
+                <td>{{ participants_group.amount }}</td>
+                <td>{{ participants_group.type }}</td>
+                <td>{{ participants_group.dateLeaves ? participants_group.dateLeaves|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('participants_groups_show', {'idParticipantG': participants_group.idParticipantG}) }}">show</a>
+                    <a href="{{ path('participants_groups_edit', {'idParticipantG': participants_group.idParticipantG}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('participants_groups_new') }}">Create new</a>
+{% endblock %}

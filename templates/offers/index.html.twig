@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Offers index{% endblock %}
+
+{% block body %}
+    <h1>Offers index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdOffers</th>
+                <th>Unit</th>
+                <th>Currency</th>
+                <th>TargetPrice</th>
+                <th>MinimumPrice</th>
+                <th>TransportFixed</th>
+                <th>TypeLiv</th>
+                <th>DateOffers</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offer in offers %}
+            <tr>
+                <td>{{ offer.idOffers }}</td>
+                <td>{{ offer.unit }}</td>
+                <td>{{ offer.currency }}</td>
+                <td>{{ offer.targetPrice }}</td>
+                <td>{{ offer.minimumPrice }}</td>
+                <td>{{ offer.transportFixed }}</td>
+                <td>{{ offer.typeLiv }}</td>
+                <td>{{ offer.dateOffers ? offer.dateOffers|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('offers_show', {'idOffers': offer.idOffers}) }}">show</a>
+                    <a href="{{ path('offers_edit', {'idOffers': offer.idOffers}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('offers_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GroupZone{% endblock %}
+
+{% block body %}
+    <h1>GroupZone</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdGroupZone</th>
+                <td>{{ group_zone.idGroupZone }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ group_zone.date ? group_zone.date|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('group_zone_index') }}">back to list</a>
+
+    <a href="{{ path('group_zone_edit', {'idGroupZone': group_zone.idGroupZone}) }}">edit</a>
+
+    {{ include('group_zone/_delete_form.html.twig') }}
+{% endblock %}

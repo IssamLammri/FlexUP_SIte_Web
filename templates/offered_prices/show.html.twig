@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OfferedPrices{% endblock %}
+
+{% block body %}
+    <h1>OfferedPrices</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdOffersPrice</th>
+                <td>{{ offered_price.idOffersPrice }}</td>
+            </tr>
+            <tr>
+                <th>PriceService</th>
+                <td>{{ offered_price.priceService }}</td>
+            </tr>
+            <tr>
+                <th>DateOffer</th>
+                <td>{{ offered_price.dateOffer ? offered_price.dateOffer|date('Y-m-d') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('offered_prices_index') }}">back to list</a>
+
+    <a href="{{ path('offered_prices_edit', {'idOffersPrice': offered_price.idOffersPrice}) }}">edit</a>
+
+    {{ include('offered_prices/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UserIdentify{% endblock %}
+
+{% block body %}
+    <h1>UserIdentify</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user_identify.id }}</td>
+            </tr>
+            <tr>
+                <th>PidNumber</th>
+                <td>{{ user_identify.pidNumber }}</td>
+            </tr>
+            <tr>
+                <th>DateOfIssue</th>
+                <td>{{ user_identify.dateOfIssue ? user_identify.dateOfIssue|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>DateOfExpiration</th>
+                <td>{{ user_identify.dateOfExpiration ? user_identify.dateOfExpiration|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EmissionEntity</th>
+                <td>{{ user_identify.emissionEntity }}</td>
+            </tr>
+            <tr>
+                <th>Satuts</th>
+                <td>{{ user_identify.satuts }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_identify_index') }}">back to list</a>
+
+    <a href="{{ path('user_identify_edit', {'id': user_identify.id}) }}">edit</a>
+
+    {{ include('user_identify/_delete_form.html.twig') }}
+{% endblock %}

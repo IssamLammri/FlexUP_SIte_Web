@@ -113,6 +113,28 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("enquiry_index");
         echo "\"> Enquiry </a>
 
+        <a class=\"btn btn-outline-dark\" href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("enquiry_index");
+        echo "\"> basket </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"";
+        // line 19
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("enquiry_index");
+        echo "\"> Offerdd_Price </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Offers </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Order refused </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Participant </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Participant groups </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Type identify Document </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Users identify  </a>
+
 
 
     </div>
@@ -137,7 +159,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
     public function getDebugInfo()
     {
-        return array (  113 => 15,  109 => 14,  105 => 13,  101 => 12,  97 => 11,  93 => 10,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  123 => 19,  118 => 17,  113 => 15,  109 => 14,  105 => 13,  101 => 12,  97 => 11,  93 => 10,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -157,6 +179,22 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         <a class=\"btn btn-outline-dark\" href=\"{{ path('category_index') }}\"> Category </a>
         <a class=\"btn btn-outline-dark\" href=\"{{ path('zone_index') }}\"> Zone de travaille </a>
         <a class=\"btn btn-outline-dark\" href=\"{{ path('enquiry_index') }}\"> Enquiry </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"{{ path('enquiry_index') }}\"> basket </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"{{ path('enquiry_index') }}\"> Offerdd_Price </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Offers </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Order refused </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Participant </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Participant groups </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Type identify Document </a>
+
+        <a class=\"btn btn-outline-dark\" href=\"#\"> Users identify  </a>
 
 
 

@@ -79,6 +79,6 @@ class __TwigTemplate_810832ccc1f2d46fb0b253237ca834016058d20c58122d6ed47d227a73d
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ group.idGroup) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "groups/_delete_form.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site_Off\\FlexUP_SIte_Web\\templates\\groups\\_delete_form.html.twig");
+", "groups/_delete_form.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\groups\\_delete_form.html.twig");
     }
 }

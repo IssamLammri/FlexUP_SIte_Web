@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}OfferedPrices index{% endblock %}
+
+{% block body %}
+    <h1>OfferedPrices index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdOffersPrice</th>
+                <th>PriceService</th>
+                <th>DateOffer</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offered_price in offered_prices %}
+            <tr>
+                <td>{{ offered_price.idOffersPrice }}</td>
+                <td>{{ offered_price.priceService }}</td>
+                <td>{{ offered_price.dateOffer ? offered_price.dateOffer|date('Y-m-d') : '' }}</td>
+                <td>
+                    <a href="{{ path('offered_prices_show', {'idOffersPrice': offered_price.idOffersPrice}) }}">show</a>
+                    <a href="{{ path('offered_prices_edit', {'idOffersPrice': offered_price.idOffersPrice}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('offered_prices_new') }}">Create new</a>
+{% endblock %}

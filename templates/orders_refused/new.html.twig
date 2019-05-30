@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New OrdersRefused{% endblock %}
+
+{% block body %}
+    <h1>Create new OrdersRefused</h1>
+
+    {{ include('orders_refused/_form.html.twig') }}
+
+    <a href="{{ path('orders_refused_index') }}">back to list</a>
+{% endblock %}

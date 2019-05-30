@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TypeIdentifyDocument index{% endblock %}
+
+{% block body %}
+    <h1>TypeIdentifyDocument index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>IdTypeIdentify</th>
+                <th>NameFrancais</th>
+                <th>NameEnglish</th>
+                <th>NameItaly</th>
+                <th>NameArabic</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for type_identify_document in type_identify_documents %}
+            <tr>
+                <td>{{ type_identify_document.idTypeIdentify }}</td>
+                <td>{{ type_identify_document.nameFrancais }}</td>
+                <td>{{ type_identify_document.nameEnglish }}</td>
+                <td>{{ type_identify_document.nameItaly }}</td>
+                <td>{{ type_identify_document.nameArabic }}</td>
+                <td>
+                    <a href="{{ path('type_identify_document_show', {'idTypeIdentify': type_identify_document.idTypeIdentify}) }}">show</a>
+                    <a href="{{ path('type_identify_document_edit', {'idTypeIdentify': type_identify_document.idTypeIdentify}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('type_identify_document_new') }}">Create new</a>
+{% endblock %}

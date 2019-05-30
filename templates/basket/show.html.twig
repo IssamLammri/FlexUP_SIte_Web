@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Basket{% endblock %}
+
+{% block body %}
+    <h1>Basket</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>IdBasket</th>
+                <td>{{ basket.idBasket }}</td>
+            </tr>
+            <tr>
+                <th>IsGroup</th>
+                <td>{{ basket.isGroup ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>IsPaid</th>
+                <td>{{ basket.isPaid ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>NameCustomer</th>
+                <td>{{ basket.nameCustomer }}</td>
+            </tr>
+            <tr>
+                <th>TotalPrice</th>
+                <td>{{ basket.totalPrice }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('basket_index') }}">back to list</a>
+
+    <a href="{{ path('basket_edit', {'idBasket': basket.idBasket}) }}">edit</a>
+
+    {{ include('basket/_delete_form.html.twig') }}
+{% endblock %}
