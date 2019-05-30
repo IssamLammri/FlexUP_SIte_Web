@@ -101,18 +101,47 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"  data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                     Services
                 </a>
-                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                    <a class=\"dropdown-item\" href=\"";
+
+                ";
         // line 37
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profil");
-        echo "\">Les service </a>
-                    <a class=\"dropdown-item\" href=\"#\">Services domestique</a>
-                    <a class=\"dropdown-item\" href=\"#\">Services aux handicapés</a>
-                    <a class=\"dropdown-item\" href=\"#\">Services aux personnes à mobilité réduite</a>
-                    <a class=\"dropdown-item\" href=\"#\">Autres services</a>
-                    <div class=\"dropdown-divider\"></div>
+        if (twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 37, $this->source); })()), "session", [], "any", false, false, false, 37), "get", [0 => "categories"], "method", false, false, false, 37)) {
+            // line 38
+            echo "
+                <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
+                    ";
+            // line 40
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "session", [], "any", false, false, false, 40), "get", [0 => "categories"], "method", false, false, false, 40));
+            foreach ($context['_seq'] as $context["_key"] => $context["cat"]) {
+                // line 41
+                echo "                        ";
+                if ((twig_get_attribute($this->env, $this->source, $context["cat"], "level", [], "any", false, false, false, 41) < 4)) {
+                    // line 42
+                    echo "                             <a class=\"dropdown-item\" href=\"";
+                    echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Profil");
+                    echo "\">";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cat"], "nameCategory", [], "any", false, false, false, 42), "html", null, true);
+                    echo " </a>
+                        ";
+                }
+                // line 44
+                echo "                    ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cat'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 45
+            echo "                    <div class=\"dropdown-divider\"></div>
                     <a class=\"dropdown-item\" href=\"#\">Ajouter un service</a>
                 </div>
+
+
+
+                ";
+        }
+        // line 52
+        echo "
+                
             </li>
 
 
@@ -126,43 +155,43 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
     </div>
     <li class=\"nav-item\">
         ";
-        // line 57
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 57, $this->source); })()), "user", [], "any", false, false, false, 57)) {
-            // line 58
+        // line 66
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "user", [], "any", false, false, false, 66)) {
+            // line 67
             echo "            <a class=\"btn btn-outline-light\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("Panier");
             echo "\"> Mon Panier </a>
             <a class=\"btn btn-outline-light\" href=\"";
-            // line 59
+            // line 68
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\"> Se déconnecter </a>
             <a class=\"btn btn-outline-light\" href=\"";
-            // line 60
+            // line 69
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("issam");
             echo "\"> Admin </a>
         ";
         } else {
-            // line 62
+            // line 71
             echo "            <a class=\"btn btn-outline-light\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("users_new");
             echo "\"> Inscription </a>
             <a class=\"btn btn-outline-light\" href=\"";
-            // line 63
+            // line 72
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
             echo "\"> Connexion </a>
         ";
         }
-        // line 65
+        // line 74
         echo "
     </li>
 </nav>
 
 ";
-        // line 69
+        // line 78
         $this->displayBlock('body', $context, $blocks);
-        // line 70
+        // line 79
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 71
+        // line 80
         echo "<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>
 <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>
@@ -214,7 +243,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     }
 
-    // line 69
+    // line 78
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -231,7 +260,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     }
 
-    // line 70
+    // line 79
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -260,7 +289,7 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
     public function getDebugInfo()
     {
-        return array (  235 => 70,  218 => 69,  201 => 10,  183 => 5,  166 => 71,  164 => 70,  162 => 69,  156 => 65,  151 => 63,  146 => 62,  141 => 60,  137 => 59,  132 => 58,  130 => 57,  107 => 37,  98 => 30,  92 => 27,  89 => 26,  87 => 25,  81 => 21,  75 => 19,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
+        return array (  264 => 79,  247 => 78,  230 => 10,  212 => 5,  195 => 80,  193 => 79,  191 => 78,  185 => 74,  180 => 72,  175 => 71,  170 => 69,  166 => 68,  161 => 67,  159 => 66,  143 => 52,  134 => 45,  128 => 44,  120 => 42,  117 => 41,  113 => 40,  109 => 38,  107 => 37,  98 => 30,  92 => 27,  89 => 26,  87 => 25,  81 => 21,  75 => 19,  73 => 18,  66 => 14,  61 => 11,  59 => 10,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -300,15 +329,24 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
                 <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"navbarDropdown\"  data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                     Services
                 </a>
+
+                {% if app.session.get('categories') %}
+
                 <div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">
-                    <a class=\"dropdown-item\" href=\"{{ path('Profil') }}\">Les service </a>
-                    <a class=\"dropdown-item\" href=\"#\">Services domestique</a>
-                    <a class=\"dropdown-item\" href=\"#\">Services aux handicapés</a>
-                    <a class=\"dropdown-item\" href=\"#\">Services aux personnes à mobilité réduite</a>
-                    <a class=\"dropdown-item\" href=\"#\">Autres services</a>
+                    {% for cat in app.session.get('categories') %}
+                        {% if cat.level <4 %}
+                             <a class=\"dropdown-item\" href=\"{{ path('Profil') }}\">{{ cat.nameCategory }} </a>
+                        {% endif %}
+                    {% endfor %}
                     <div class=\"dropdown-divider\"></div>
                     <a class=\"dropdown-item\" href=\"#\">Ajouter un service</a>
                 </div>
+
+
+
+                {% endif %}
+
+                
             </li>
 
 
@@ -342,6 +380,6 @@ class __TwigTemplate_561837bade794a4a029c33662ab57081ef38a7899e7d542ad77317e1029
 
 </body>
 </html>
-", "base.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\base.html.twig");
+", "base.html.twig", "C:\\wamp64\\www\\FlexUP_SIte_Web\\templates\\base.html.twig");
     }
 }

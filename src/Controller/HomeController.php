@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Category;
 
 
 class HomeController extends AbstractController {
@@ -15,6 +16,12 @@ class HomeController extends AbstractController {
      *
      */
     public function index():Response {
-            return $this->render('Home/home.html.twig');
+    	$categories = $this->getDoctrine()
+            ->getRepository(Category::class)
+            ->findAll();
+
+        $this->get('session')->set('categories', $categories);
+
+        return $this->render('Home/home.html.twig');
     }
 }

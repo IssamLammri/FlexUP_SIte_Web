@@ -102,6 +102,6 @@ class __TwigTemplate_388d3a039a6c5a4f2e31ab6447efc8bbacfe0da11d38185a190f7ee12b8
   {{ include('@Twig/Exception/trace.txt.twig', { trace: trace }, with_context = false) }}
 {% endfor %}
 {% endif %}
-", "@Twig/Exception/traces.txt.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.txt.twig");
+", "@Twig/Exception/traces.txt.twig", "C:\\wamp64\\www\\FlexUP_SIte_Web\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.txt.twig");
     }
 }

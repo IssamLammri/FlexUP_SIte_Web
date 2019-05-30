@@ -33,15 +33,24 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Services
                 </a>
+
+                {% if app.session.get('categories') %}
+
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ path('Profil') }}">Les service </a>
-                    <a class="dropdown-item" href="#">Services domestique</a>
-                    <a class="dropdown-item" href="#">Services aux handicapés</a>
-                    <a class="dropdown-item" href="#">Services aux personnes à mobilité réduite</a>
-                    <a class="dropdown-item" href="#">Autres services</a>
+                    {% for cat in app.session.get('categories') %}
+                        {% if cat.level <4 %}
+                             <a class="dropdown-item" href="{{ path('Profil') }}">{{ cat.nameCategory }} </a>
+                        {% endif %}
+                    {% endfor %}
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Ajouter un service</a>
                 </div>
+
+
+
+                {% endif %}
+
+                
             </li>
 
 
