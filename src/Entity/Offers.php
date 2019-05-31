@@ -108,7 +108,8 @@ class Offers
         return $this->idGroup;
     }
 
-    public function setIdGroup(int $idGroup): self
+
+    public function setIdGroup(?Groups $idGroup): self
     {
         $this->idGroup = $idGroup;
 
@@ -120,7 +121,7 @@ class Offers
         return $this->idService;
     }
 
-    public function setIdService(int $idService): self
+    public function setIdService(?Service $idService): self
     {
         $this->idService = $idService;
 
@@ -132,9 +133,9 @@ class Offers
         return $this->idZones;
     }
 
-    public function setIdZones(int $idZones): self
+    public function setIdZones(?Zone $idZone): self
     {
-        $this->idZones = $idZones;
+        $this->idZones = $idZone;
 
         return $this;
     }

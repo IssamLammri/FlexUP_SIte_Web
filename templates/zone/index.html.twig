@@ -11,12 +11,7 @@
                 <th>IdZone</th>
                 <th>NameZone</th>
                 <th>Level</th>
-                <th>Z0</th>
-                <th>Z1</th>
-                <th>Z2</th>
-                <th>Z3</th>
-                <th>Z4</th>
-                <th>Z5</th>
+
                 <th>actions</th>
             </tr>
         </thead>
@@ -26,12 +21,7 @@
                 <td>{{ zone.idZone }}</td>
                 <td>{{ zone.nameZone }}</td>
                 <td>{{ zone.level }}</td>
-                <td>{{ zone.z0 }}</td>
-                <td>{{ zone.z1 }}</td>
-                <td>{{ zone.z2 }}</td>
-                <td>{{ zone.z3 }}</td>
-                <td>{{ zone.z4 }}</td>
-                <td>{{ zone.z5 }}</td>
+
                 <td>
                     <a href="{{ path('zone_show', {'idZone': zone.idZone}) }}">show</a>
                     <a href="{{ path('zone_edit', {'idZone': zone.idZone}) }}">edit</a>

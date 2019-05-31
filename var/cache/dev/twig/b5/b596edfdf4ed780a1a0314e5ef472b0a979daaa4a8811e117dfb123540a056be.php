@@ -250,6 +250,6 @@ class __TwigTemplate_1af7e2f7a8b262e7e50980474d80bde25d83376c1052f56346d54591214
 
     <a href=\"{{ path('groups_new') }}\">Create new</a>
 {% endblock %}
-", "groups/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\groups\\index.html.twig");
+", "groups/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP_SIte_Web\\templates\\groups\\index.html.twig");
     }
 }

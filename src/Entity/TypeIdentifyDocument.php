@@ -101,6 +101,9 @@ class TypeIdentifyDocument
 
         return $this;
     }
-
-
+    public function __toString()
+    {
+        $chaine = (string)$this->getIdTypeIdentify();
+        return $chaine;
+    }
 }

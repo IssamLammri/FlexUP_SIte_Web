@@ -89,68 +89,40 @@ class __TwigTemplate_68fd0c640e0b68e8ca46655ff422cfc44d80a8c32f3f9ea7fb7d9aa8737
                 <th>IdZone</th>
                 <th>NameZone</th>
                 <th>Level</th>
-                <th>Z0</th>
-                <th>Z1</th>
-                <th>Z2</th>
-                <th>Z3</th>
-                <th>Z4</th>
-                <th>Z5</th>
+
                 <th>actions</th>
             </tr>
         </thead>
         <tbody>
         ";
-        // line 24
+        // line 19
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["zones"]) || array_key_exists("zones", $context) ? $context["zones"] : (function () { throw new RuntimeError('Variable "zones" does not exist.', 24, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["zones"]) || array_key_exists("zones", $context) ? $context["zones"] : (function () { throw new RuntimeError('Variable "zones" does not exist.', 19, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["zone"]) {
-            // line 25
+            // line 20
             echo "            <tr>
                 <td>";
-            // line 26
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "idZone", [], "any", false, false, false, 26), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "idZone", [], "any", false, false, false, 21), "html", null, true);
             echo "</td>
                 <td>";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "nameZone", [], "any", false, false, false, 27), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "nameZone", [], "any", false, false, false, 22), "html", null, true);
             echo "</td>
                 <td>";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "level", [], "any", false, false, false, 28), "html", null, true);
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "level", [], "any", false, false, false, 23), "html", null, true);
             echo "</td>
-                <td>";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "z0", [], "any", false, false, false, 29), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "z1", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "z2", [], "any", false, false, false, 31), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "z3", [], "any", false, false, false, 32), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "z4", [], "any", false, false, false, 33), "html", null, true);
-            echo "</td>
-                <td>";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["zone"], "z5", [], "any", false, false, false, 34), "html", null, true);
-            echo "</td>
+
                 <td>
                     <a href=\"";
-            // line 36
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_show", ["idZone" => twig_get_attribute($this->env, $this->source, $context["zone"], "idZone", [], "any", false, false, false, 36)]), "html", null, true);
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_show", ["idZone" => twig_get_attribute($this->env, $this->source, $context["zone"], "idZone", [], "any", false, false, false, 26)]), "html", null, true);
             echo "\">show</a>
                     <a href=\"";
-            // line 37
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_edit", ["idZone" => twig_get_attribute($this->env, $this->source, $context["zone"], "idZone", [], "any", false, false, false, 37)]), "html", null, true);
+            // line 27
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_edit", ["idZone" => twig_get_attribute($this->env, $this->source, $context["zone"], "idZone", [], "any", false, false, false, 27)]), "html", null, true);
             echo "\">edit</a>
                 </td>
             </tr>
@@ -158,7 +130,7 @@ class __TwigTemplate_68fd0c640e0b68e8ca46655ff422cfc44d80a8c32f3f9ea7fb7d9aa8737
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 41
+            // line 31
             echo "            <tr>
                 <td colspan=\"10\">no records found</td>
             </tr>
@@ -167,12 +139,12 @@ class __TwigTemplate_68fd0c640e0b68e8ca46655ff422cfc44d80a8c32f3f9ea7fb7d9aa8737
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['zone'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 35
         echo "        </tbody>
     </table>
 
     <a href=\"";
-        // line 48
+        // line 38
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_new");
         echo "\">Create new</a>
 ";
@@ -196,7 +168,7 @@ class __TwigTemplate_68fd0c640e0b68e8ca46655ff422cfc44d80a8c32f3f9ea7fb7d9aa8737
 
     public function getDebugInfo()
     {
-        return array (  176 => 48,  171 => 45,  162 => 41,  153 => 37,  149 => 36,  144 => 34,  140 => 33,  136 => 32,  132 => 31,  128 => 30,  124 => 29,  120 => 28,  116 => 27,  112 => 26,  109 => 25,  104 => 24,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  148 => 38,  143 => 35,  134 => 31,  125 => 27,  121 => 26,  115 => 23,  111 => 22,  107 => 21,  104 => 20,  99 => 19,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -214,12 +186,7 @@ class __TwigTemplate_68fd0c640e0b68e8ca46655ff422cfc44d80a8c32f3f9ea7fb7d9aa8737
                 <th>IdZone</th>
                 <th>NameZone</th>
                 <th>Level</th>
-                <th>Z0</th>
-                <th>Z1</th>
-                <th>Z2</th>
-                <th>Z3</th>
-                <th>Z4</th>
-                <th>Z5</th>
+
                 <th>actions</th>
             </tr>
         </thead>
@@ -229,12 +196,7 @@ class __TwigTemplate_68fd0c640e0b68e8ca46655ff422cfc44d80a8c32f3f9ea7fb7d9aa8737
                 <td>{{ zone.idZone }}</td>
                 <td>{{ zone.nameZone }}</td>
                 <td>{{ zone.level }}</td>
-                <td>{{ zone.z0 }}</td>
-                <td>{{ zone.z1 }}</td>
-                <td>{{ zone.z2 }}</td>
-                <td>{{ zone.z3 }}</td>
-                <td>{{ zone.z4 }}</td>
-                <td>{{ zone.z5 }}</td>
+
                 <td>
                     <a href=\"{{ path('zone_show', {'idZone': zone.idZone}) }}\">show</a>
                     <a href=\"{{ path('zone_edit', {'idZone': zone.idZone}) }}\">edit</a>
@@ -250,6 +212,6 @@ class __TwigTemplate_68fd0c640e0b68e8ca46655ff422cfc44d80a8c32f3f9ea7fb7d9aa8737
 
     <a href=\"{{ path('zone_new') }}\">Create new</a>
 {% endblock %}
-", "zone/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\zone\\index.html.twig");
+", "zone/index.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP_SIte_Web\\templates\\zone\\index.html.twig");
     }
 }

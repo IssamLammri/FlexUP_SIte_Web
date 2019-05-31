@@ -106,63 +106,21 @@ class __TwigTemplate_e4742b8a2de956f9380f7e46def74b4ade44e65e0aed105290c3d80d13d
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 20, $this->source); })()), "level", [], "any", false, false, false, 20), "html", null, true);
         echo "</td>
             </tr>
-            <tr>
-                <th>Z0</th>
-                <td>";
-        // line 24
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 24, $this->source); })()), "z0", [], "any", false, false, false, 24), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Z1</th>
-                <td>";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 28, $this->source); })()), "z1", [], "any", false, false, false, 28), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Z2</th>
-                <td>";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 32, $this->source); })()), "z2", [], "any", false, false, false, 32), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Z3</th>
-                <td>";
-        // line 36
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 36, $this->source); })()), "z3", [], "any", false, false, false, 36), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Z4</th>
-                <td>";
-        // line 40
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 40, $this->source); })()), "z4", [], "any", false, false, false, 40), "html", null, true);
-        echo "</td>
-            </tr>
-            <tr>
-                <th>Z5</th>
-                <td>";
-        // line 44
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 44, $this->source); })()), "z5", [], "any", false, false, false, 44), "html", null, true);
-        echo "</td>
-            </tr>
         </tbody>
     </table>
 
     <a href=\"";
-        // line 49
+        // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_index");
         echo "\">back to list</a>
 
     <a href=\"";
-        // line 51
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_edit", ["idZone" => twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 51, $this->source); })()), "idZone", [], "any", false, false, false, 51)]), "html", null, true);
+        // line 27
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_edit", ["idZone" => twig_get_attribute($this->env, $this->source, (isset($context["zone"]) || array_key_exists("zone", $context) ? $context["zone"] : (function () { throw new RuntimeError('Variable "zone" does not exist.', 27, $this->source); })()), "idZone", [], "any", false, false, false, 27)]), "html", null, true);
         echo "\">edit</a>
 
     ";
-        // line 53
+        // line 29
         echo twig_include($this->env, $context, "zone/_delete_form.html.twig");
         echo "
 ";
@@ -186,7 +144,7 @@ class __TwigTemplate_e4742b8a2de956f9380f7e46def74b4ade44e65e0aed105290c3d80d13d
 
     public function getDebugInfo()
     {
-        return array (  166 => 53,  161 => 51,  156 => 49,  148 => 44,  141 => 40,  134 => 36,  127 => 32,  120 => 28,  113 => 24,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  124 => 29,  119 => 27,  114 => 25,  106 => 20,  99 => 16,  92 => 12,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -212,30 +170,6 @@ class __TwigTemplate_e4742b8a2de956f9380f7e46def74b4ade44e65e0aed105290c3d80d13d
                 <th>Level</th>
                 <td>{{ zone.level }}</td>
             </tr>
-            <tr>
-                <th>Z0</th>
-                <td>{{ zone.z0 }}</td>
-            </tr>
-            <tr>
-                <th>Z1</th>
-                <td>{{ zone.z1 }}</td>
-            </tr>
-            <tr>
-                <th>Z2</th>
-                <td>{{ zone.z2 }}</td>
-            </tr>
-            <tr>
-                <th>Z3</th>
-                <td>{{ zone.z3 }}</td>
-            </tr>
-            <tr>
-                <th>Z4</th>
-                <td>{{ zone.z4 }}</td>
-            </tr>
-            <tr>
-                <th>Z5</th>
-                <td>{{ zone.z5 }}</td>
-            </tr>
         </tbody>
     </table>
 
@@ -245,6 +179,6 @@ class __TwigTemplate_e4742b8a2de956f9380f7e46def74b4ade44e65e0aed105290c3d80d13d
 
     {{ include('zone/_delete_form.html.twig') }}
 {% endblock %}
-", "zone/show.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\zone\\show.html.twig");
+", "zone/show.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP_SIte_Web\\templates\\zone\\show.html.twig");
     }
 }

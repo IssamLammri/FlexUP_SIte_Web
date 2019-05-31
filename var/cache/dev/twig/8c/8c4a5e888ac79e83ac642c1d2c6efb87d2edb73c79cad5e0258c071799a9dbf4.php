@@ -129,6 +129,6 @@ class __TwigTemplate_2f2bcf8b0d7cbac57bf6e70a756c675b90d73eb416db1434ba88242d5fe
 
     <a href=\"{{ path('category_index') }}\">back to list</a>
 {% endblock %}
-", "category/new.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\category\\new.html.twig");
+", "category/new.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP_SIte_Web\\templates\\category\\new.html.twig");
     }
 }

@@ -543,6 +543,13 @@
         <argument type="service" id=".service_locator.KTVqfp6.App\Controller\ServiceController"/>
       </call>
     </service>
+    <service id="App\Controller\Services\ViewServicesController" class="App\Controller\Services\ViewServicesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.KTVqfp6.App\Controller\Services\ViewServicesController"/>
+      </call>
+    </service>
     <service id="App\Controller\TypeIdentifyDocumentController" class="App\Controller\TypeIdentifyDocumentController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -4778,6 +4785,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ServiceController" class="App\Controller\ServiceController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ServiceController" class="App\Controller\ServiceController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ServiceController" class="App\Controller\ServiceController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Services\ViewServicesController" class="App\Controller\Services\ViewServicesController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Services\ViewServicesController" class="App\Controller\Services\ViewServicesController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Services\ViewServicesController" class="App\Controller\Services\ViewServicesController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\TypeIdentifyDocumentController" class="App\Controller\TypeIdentifyDocumentController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\TypeIdentifyDocumentController" class="App\Controller\TypeIdentifyDocumentController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\TypeIdentifyDocumentController" class="App\Controller\TypeIdentifyDocumentController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5111,7 +5121,7 @@
         <argument key="zone" type="service" id=".errored..service_locator.dnczLyX.App\Entity\Zone"/>
       </argument>
     </service>
-    <service id=".service_locator.6pehrCX" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.S0d54DD" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AddressesController::delete" type="service" id=".service_locator.alodU2Q"/>
@@ -5154,6 +5164,9 @@
         <argument key="App\Controller\ServiceController::delete" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\ServiceController::edit" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\ServiceController::show" type="service" id=".service_locator..7DLMsk"/>
+        <argument key="App\Controller\Services\ViewServicesController::delete" type="service" id=".service_locator.alodU2Q"/>
+        <argument key="App\Controller\Services\ViewServicesController::edit" type="service" id=".service_locator.alodU2Q"/>
+        <argument key="App\Controller\Services\ViewServicesController::show" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\TypeIdentifyDocumentController::delete" type="service" id=".service_locator.imC3qXS"/>
         <argument key="App\Controller\TypeIdentifyDocumentController::edit" type="service" id=".service_locator.imC3qXS"/>
         <argument key="App\Controller\TypeIdentifyDocumentController::show" type="service" id=".service_locator.imC3qXS"/>
@@ -5207,6 +5220,9 @@
         <argument key="App\Controller\ServiceController:delete" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\ServiceController:edit" type="service" id=".service_locator..7DLMsk"/>
         <argument key="App\Controller\ServiceController:show" type="service" id=".service_locator..7DLMsk"/>
+        <argument key="App\Controller\Services\ViewServicesController:delete" type="service" id=".service_locator.alodU2Q"/>
+        <argument key="App\Controller\Services\ViewServicesController:edit" type="service" id=".service_locator.alodU2Q"/>
+        <argument key="App\Controller\Services\ViewServicesController:show" type="service" id=".service_locator.alodU2Q"/>
         <argument key="App\Controller\TypeIdentifyDocumentController:delete" type="service" id=".service_locator.imC3qXS"/>
         <argument key="App\Controller\TypeIdentifyDocumentController:edit" type="service" id=".service_locator.imC3qXS"/>
         <argument key="App\Controller\TypeIdentifyDocumentController:show" type="service" id=".service_locator.imC3qXS"/>
@@ -5624,6 +5640,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.KTVqfp6" method="withContext"/>
     </service>
+    <service id=".service_locator.KTVqfp6.App\Controller\Services\ViewServicesController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\Services\ViewServicesController"/>
+      <argument>App\Controller\Services\ViewServicesController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.KTVqfp6" method="withContext"/>
+    </service>
     <service id=".service_locator.KTVqfp6.App\Controller\TypeIdentifyDocumentController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\TypeIdentifyDocumentController"/>
       <argument>App\Controller\TypeIdentifyDocumentController</argument>
@@ -5740,7 +5762,7 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.6pehrCX"/>
+      <argument type="service" id=".service_locator.S0d54DD"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
@@ -6101,7 +6123,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupCollectionInterface" alias="webpack_encore.entrypoint_lookup_collection" public="false"/>
     <service id="Symfony\WebpackEncoreBundle\Asset\EntrypointLookupInterface" alias="webpack_encore.entrypoint_lookup[_default]"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.6pehrCX"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.S0d54DD"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".service_locator.tSKDlY7" alias=".1_ServiceLocator~6r.dUzt" public="false"/>

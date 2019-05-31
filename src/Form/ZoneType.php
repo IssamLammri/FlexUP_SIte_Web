@@ -14,12 +14,6 @@ class ZoneType extends AbstractType
         $builder
             ->add('nameZone')
             ->add('level')
-            ->add('z0')
-            ->add('z1')
-            ->add('z2')
-            ->add('z3')
-            ->add('z4')
-            ->add('z5')
             ->add('idParent')
             ->add('currency')
         ;

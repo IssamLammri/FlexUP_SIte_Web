@@ -126,6 +126,6 @@ class __TwigTemplate_cf05dda0e1cb4861563217b6d1bdfc60896a9e83966104bb0cf44cf347b
     </div>
     
 
-{% endblock %}", "Pages/Panier.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\templates\\Pages\\Panier.html.twig");
+{% endblock %}", "Pages/Panier.html.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP_SIte_Web\\templates\\Pages\\Panier.html.twig");
     }
 }

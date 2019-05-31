@@ -93,6 +93,6 @@ class __TwigTemplate_ad07eb368c719167456a70eab6f44349f3948f202fe7fdc0bd51bb0fb3a
             </trace>
 {% endfor %}
         </traces>
-", "@Twig/Exception/traces.xml.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\Site Copier\\FlexUP_SIte_Web\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.xml.twig");
+", "@Twig/Exception/traces.xml.twig", "E:\\UNIV le Havre\\Stage\\Site_Web\\Site_Web\\FlexUP_SIte_Web\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\traces.xml.twig");
     }
 }
