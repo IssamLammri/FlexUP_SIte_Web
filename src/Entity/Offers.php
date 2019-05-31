@@ -44,7 +44,7 @@ class Offers
      * @var \Zone
      *@ORM\ManyToOne(targetEntity="Zone")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ID_Zone",referencedColumnName="ID_Zone")
+     *   @ORM\JoinColumn(name="ID_Zones",referencedColumnName="ID_Zone")
      * })
      */
     private $idZones;

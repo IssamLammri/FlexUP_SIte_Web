@@ -48,7 +48,8 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/panier' => [[['_route' => 'Panier', '_controller' => 'App\\Controller\\Panier::index'], null, null, null, false, false, null]],
             '/participants' => [[['_route' => 'participants_index', '_controller' => 'App\\Controller\\ParticipantsController::index'], null, ['GET' => 0], null, true, false, null]],
             '/participants/new' => [[['_route' => 'participants_new', '_controller' => 'App\\Controller\\ParticipantsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            '/participants/groups/new' => [[['_route' => 'participants_groups_new', '_controller' => 'App\\Controller\\ParticipantsGroupsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            '/participantsgroups' => [[['_route' => 'participants_groups_index', '_controller' => 'App\\Controller\\ParticipantsGroupsController::index'], null, ['GET' => 0], null, true, false, null]],
+            '/participantsgroups/new' => [[['_route' => 'participants_groups_new', '_controller' => 'App\\Controller\\ParticipantsGroupsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
             '/profil' => [[['_route' => 'Profil', '_controller' => 'App\\Controller\\Profil::index'], null, null, null, false, false, null]],
             '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
             '/service' => [[['_route' => 'service_index', '_controller' => 'App\\Controller\\ServiceController::index'], null, ['GET' => 0], null, true, false, null]],
@@ -138,47 +139,44 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                             .'|(*:677)'
                         .')'
                     .')'
-                    .'|/participants/(?'
-                        .'|([^/]++)(?'
+                    .'|/participants(?'
+                        .'|/([^/]++)(?'
                             .'|(*:715)'
                             .'|/edit(*:728)'
                             .'|(*:736)'
                         .')'
-                        .'|groups(?'
-                            .'|(*:754)'
-                            .'|/([^/]++)(?'
-                                .'|(*:774)'
-                                .'|/edit(*:787)'
-                                .'|(*:795)'
-                            .')'
+                        .'|groups/([^/]++)(?'
+                            .'|(*:763)'
+                            .'|/edit(*:776)'
+                            .'|(*:784)'
                         .')'
                     .')'
                     .'|/service/([^/]++)(?'
-                        .'|(*:826)'
-                        .'|/edit(*:839)'
-                        .'|(*:847)'
+                        .'|(*:814)'
+                        .'|/edit(*:827)'
+                        .'|(*:835)'
                     .')'
                     .'|/type/identify/document/([^/]++)(?'
-                        .'|(*:891)'
-                        .'|/edit(*:904)'
-                        .'|(*:912)'
+                        .'|(*:879)'
+                        .'|/edit(*:892)'
+                        .'|(*:900)'
                     .')'
                     .'|/user(?'
                         .'|/identify/([^/]++)(?'
-                            .'|(*:950)'
-                            .'|/edit(*:963)'
-                            .'|(*:971)'
+                            .'|(*:938)'
+                            .'|/edit(*:951)'
+                            .'|(*:959)'
                         .')'
                         .'|s/([^/]++)(?'
-                            .'|(*:993)'
-                            .'|/edit(*:1006)'
-                            .'|(*:1015)'
+                            .'|(*:981)'
+                            .'|/edit(*:994)'
+                            .'|(*:1002)'
                         .')'
                     .')'
                     .'|/zone/([^/]++)(?'
-                        .'|(*:1043)'
-                        .'|/edit(*:1057)'
-                        .'|(*:1066)'
+                        .'|(*:1030)'
+                        .'|/edit(*:1044)'
+                        .'|(*:1053)'
                     .')'
                 .')/?$}sDu',
         ];
@@ -223,25 +221,24 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             715 => [[['_route' => 'participants_show', '_controller' => 'App\\Controller\\ParticipantsController::show'], ['idParticipant'], ['GET' => 0], null, false, true, null]],
             728 => [[['_route' => 'participants_edit', '_controller' => 'App\\Controller\\ParticipantsController::edit'], ['idParticipant'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
             736 => [[['_route' => 'participants_delete', '_controller' => 'App\\Controller\\ParticipantsController::delete'], ['idParticipant'], ['DELETE' => 0], null, false, true, null]],
-            754 => [[['_route' => 'participants_groups_index', '_controller' => 'App\\Controller\\ParticipantsGroupsController::index'], [], ['GET' => 0], null, true, false, null]],
-            774 => [[['_route' => 'participants_groups_show', '_controller' => 'App\\Controller\\ParticipantsGroupsController::show'], ['idParticipantG'], ['GET' => 0], null, false, true, null]],
-            787 => [[['_route' => 'participants_groups_edit', '_controller' => 'App\\Controller\\ParticipantsGroupsController::edit'], ['idParticipantG'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            795 => [[['_route' => 'participants_groups_delete', '_controller' => 'App\\Controller\\ParticipantsGroupsController::delete'], ['idParticipantG'], ['DELETE' => 0], null, false, true, null]],
-            826 => [[['_route' => 'service_show', '_controller' => 'App\\Controller\\ServiceController::show'], ['idService'], ['GET' => 0], null, false, true, null]],
-            839 => [[['_route' => 'service_edit', '_controller' => 'App\\Controller\\ServiceController::edit'], ['idService'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            847 => [[['_route' => 'service_delete', '_controller' => 'App\\Controller\\ServiceController::delete'], ['idService'], ['DELETE' => 0], null, false, true, null]],
-            891 => [[['_route' => 'type_identify_document_show', '_controller' => 'App\\Controller\\TypeIdentifyDocumentController::show'], ['idTypeIdentify'], ['GET' => 0], null, false, true, null]],
-            904 => [[['_route' => 'type_identify_document_edit', '_controller' => 'App\\Controller\\TypeIdentifyDocumentController::edit'], ['idTypeIdentify'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            912 => [[['_route' => 'type_identify_document_delete', '_controller' => 'App\\Controller\\TypeIdentifyDocumentController::delete'], ['idTypeIdentify'], ['DELETE' => 0], null, false, true, null]],
-            950 => [[['_route' => 'user_identify_show', '_controller' => 'App\\Controller\\UserIdentifyController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-            963 => [[['_route' => 'user_identify_edit', '_controller' => 'App\\Controller\\UserIdentifyController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            971 => [[['_route' => 'user_identify_delete', '_controller' => 'App\\Controller\\UserIdentifyController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
-            993 => [[['_route' => 'users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['idUser'], ['GET' => 0], null, false, true, null]],
-            1006 => [[['_route' => 'users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['idUser'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            1015 => [[['_route' => 'users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['idUser'], ['DELETE' => 0], null, false, true, null]],
-            1043 => [[['_route' => 'zone_show', '_controller' => 'App\\Controller\\ZoneController::show'], ['idZone'], ['GET' => 0], null, false, true, null]],
-            1057 => [[['_route' => 'zone_edit', '_controller' => 'App\\Controller\\ZoneController::edit'], ['idZone'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-            1066 => [[['_route' => 'zone_delete', '_controller' => 'App\\Controller\\ZoneController::delete'], ['idZone'], ['DELETE' => 0], null, false, true, null]],
+            763 => [[['_route' => 'participants_groups_show', '_controller' => 'App\\Controller\\ParticipantsGroupsController::show'], ['idParticipantG'], ['GET' => 0], null, false, true, null]],
+            776 => [[['_route' => 'participants_groups_edit', '_controller' => 'App\\Controller\\ParticipantsGroupsController::edit'], ['idParticipantG'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            784 => [[['_route' => 'participants_groups_delete', '_controller' => 'App\\Controller\\ParticipantsGroupsController::delete'], ['idParticipantG'], ['DELETE' => 0], null, false, true, null]],
+            814 => [[['_route' => 'service_show', '_controller' => 'App\\Controller\\ServiceController::show'], ['idService'], ['GET' => 0], null, false, true, null]],
+            827 => [[['_route' => 'service_edit', '_controller' => 'App\\Controller\\ServiceController::edit'], ['idService'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            835 => [[['_route' => 'service_delete', '_controller' => 'App\\Controller\\ServiceController::delete'], ['idService'], ['DELETE' => 0], null, false, true, null]],
+            879 => [[['_route' => 'type_identify_document_show', '_controller' => 'App\\Controller\\TypeIdentifyDocumentController::show'], ['idTypeIdentify'], ['GET' => 0], null, false, true, null]],
+            892 => [[['_route' => 'type_identify_document_edit', '_controller' => 'App\\Controller\\TypeIdentifyDocumentController::edit'], ['idTypeIdentify'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            900 => [[['_route' => 'type_identify_document_delete', '_controller' => 'App\\Controller\\TypeIdentifyDocumentController::delete'], ['idTypeIdentify'], ['DELETE' => 0], null, false, true, null]],
+            938 => [[['_route' => 'user_identify_show', '_controller' => 'App\\Controller\\UserIdentifyController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+            951 => [[['_route' => 'user_identify_edit', '_controller' => 'App\\Controller\\UserIdentifyController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            959 => [[['_route' => 'user_identify_delete', '_controller' => 'App\\Controller\\UserIdentifyController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+            981 => [[['_route' => 'users_show', '_controller' => 'App\\Controller\\UsersController::show'], ['idUser'], ['GET' => 0], null, false, true, null]],
+            994 => [[['_route' => 'users_edit', '_controller' => 'App\\Controller\\UsersController::edit'], ['idUser'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            1002 => [[['_route' => 'users_delete', '_controller' => 'App\\Controller\\UsersController::delete'], ['idUser'], ['DELETE' => 0], null, false, true, null]],
+            1030 => [[['_route' => 'zone_show', '_controller' => 'App\\Controller\\ZoneController::show'], ['idZone'], ['GET' => 0], null, false, true, null]],
+            1044 => [[['_route' => 'zone_edit', '_controller' => 'App\\Controller\\ZoneController::edit'], ['idZone'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+            1053 => [[['_route' => 'zone_delete', '_controller' => 'App\\Controller\\ZoneController::delete'], ['idZone'], ['DELETE' => 0], null, false, true, null]],
         ];
     }
 }

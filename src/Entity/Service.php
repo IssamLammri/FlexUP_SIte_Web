@@ -104,6 +104,12 @@ class Service
 
         return $this;
     }
+    public function __toString()
+    {
+        $chaine = $this->getNameService();
+        return $chaine;
+
+    }
 
 
 }
