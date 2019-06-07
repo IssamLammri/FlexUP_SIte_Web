@@ -130,35 +130,30 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
         <a class=\"btn btn-outline-dark\" href=\"";
         // line 23
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("zone_index");
-        echo "\"> Zone </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"";
-        // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("orders_refused_index");
         echo "\"> Order refused </a>
 
         <a class=\"btn btn-outline-dark\" href=\"";
-        // line 27
+        // line 25
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("participants_index");
         echo "\"> Participant </a>
 
         <a class=\"btn btn-outline-dark\" href=\"";
-        // line 29
+        // line 27
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("participants_groups_index");
         echo "\"> Participant groups </a>
 
         <a class=\"btn btn-outline-dark\" href=\"";
-        // line 31
+        // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("type_identify_document_index");
         echo "\"> Type identify Document </a>
 
         <a class=\"btn btn-outline-dark\" href=\"";
-        // line 33
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_identify_index");
         echo "\"> Users identify  </a>
         <a class=\"btn btn-outline-dark\" href=\"";
-        // line 34
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("group_zone_index");
         echo "\"> Group Zone  </a>
 
@@ -187,7 +182,7 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
 
     public function getDebugInfo()
     {
-        return array (  162 => 34,  158 => 33,  153 => 31,  148 => 29,  143 => 27,  138 => 25,  133 => 23,  128 => 21,  123 => 19,  118 => 17,  113 => 15,  109 => 14,  105 => 13,  101 => 12,  97 => 11,  93 => 10,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
+        return array (  157 => 32,  153 => 31,  148 => 29,  143 => 27,  138 => 25,  133 => 23,  128 => 21,  123 => 19,  118 => 17,  113 => 15,  109 => 14,  105 => 13,  101 => 12,  97 => 11,  93 => 10,  89 => 9,  84 => 6,  75 => 5,  57 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -213,8 +208,6 @@ class __TwigTemplate_370eb1dfbf747c40415cfc149c2cb0280a5955ab4fef3bf4542a2953679
         <a class=\"btn btn-outline-dark\" href=\"{{ path('offered_prices_index') }}\"> Offers_Price </a>
 
         <a class=\"btn btn-outline-dark\" href=\"{{ path('offers_index') }}\"> Offers </a>
-
-        <a class=\"btn btn-outline-dark\" href=\"{{ path('zone_index') }}\"> Zone </a>
 
         <a class=\"btn btn-outline-dark\" href=\"{{ path('orders_refused_index') }}\"> Order refused </a>
 

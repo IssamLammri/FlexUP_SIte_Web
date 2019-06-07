@@ -15,9 +15,11 @@ class ParticipantsGroups
     /**
      * @var int
      *
-     * @ORM\Column(name="ID_Participant_Group", type="integer", nullable=false)
+     * @ORM\Column(name="ID_Participant_G", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $idParticipantGroup;
+    private $idParticipantG;
 
     /**
      * @var \DateTime
@@ -61,25 +63,26 @@ class ParticipantsGroups
      * @var \Groups
      *
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="NONE")
      * @ORM\OneToOne(targetEntity="Groups")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="ID_Participant_G", referencedColumnName="ID_Group")
+     *   @ORM\JoinColumn(name="ID_Participant_Group", referencedColumnName="ID_Group")
      * })
      */
-    private $idParticipantG;
+    private $idParticipantGroup;
 
-    public function getIdParticipantGroup(): ?int
+    public function getIdParticipantG(): ?int
     {
-        return $this->idParticipantGroup;
+        return $this->idParticipantG;
     }
 
-    public function setIdParticipantGroup(int $idParticipantGroup): self
+    public function setIdParticipantG(?Groups $idParticipantG): self
     {
-        $this->idParticipantGroup = $idParticipantGroup;
+        $this->idParticipantG = $idParticipantG;
 
         return $this;
     }
+
+
 
     public function getInvestmentDate(): ?\DateTimeInterface
     {
@@ -129,6 +132,17 @@ class ParticipantsGroups
         return $this;
     }
 
+    public function getIdParticipantGroup(): ?Groups
+    {
+        return $this->idParticipantGroup;
+    }
+
+    public function setIdParticipantGroup(int $idParticipantGroup): self
+    {
+        $this->idParticipantGroup = $idParticipantGroup;
+
+        return $this;
+    }
     public function getIdOriginGroup(): ?Groups
     {
         return $this->idOriginGroup;
@@ -141,17 +155,7 @@ class ParticipantsGroups
         return $this;
     }
 
-    public function getIdParticipantG(): ?Groups
-    {
-        return $this->idParticipantG;
-    }
 
-    public function setIdParticipantG(?Groups $idParticipantG): self
-    {
-        $this->idParticipantG = $idParticipantG;
-
-        return $this;
-    }
 
 
 }

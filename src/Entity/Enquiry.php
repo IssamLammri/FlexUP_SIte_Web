@@ -382,6 +382,12 @@ class Enquiry
 
         return $this;
     }
+    public function __toString()
+    {
+        $chaine = (string)$this->getIdOffersPrice();
+        return $chaine;
+
+    }
 
 
 }
